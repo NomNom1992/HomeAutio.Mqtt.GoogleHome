@@ -1,0 +1,116 @@
+@model HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel
+
+@section Scripts {
+    <script>
+        var openDocumentation = function () {
+            var deviceTypeDropDown = document.getElementById("Type");
+            var deviceType = deviceTypeDropDown.options[deviceTypeDropDown.selectedIndex].text;
+
+            if (deviceType !== "Please select") {
+                window.open('https://developers.google.com/actions/smarthome/guides/' + deviceType.toLowerCase());
+            }
+        }
+    </script>
+}
+
+<div class="device-page">
+    <partial name="_ValidationSummary" />
+
+    <div class="row">
+        <div class="col-sm-6 mt-3">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Device Information</h2>
+                </div>
+                <form id="createForm" method="post"></form>
+                <div class="card-body">
+                    <fieldset>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Id">Device Id</label>
+                            <input form="createForm" class="form-control" placeholder="Device Id" asp-for="Id" autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Type">Device Type</label>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <select form="createForm" class="form-select" asp-for="Type" asp-items="@(Html.GetEnumSelectList<HomeAutio.Mqtt.GoogleHome.Models.DeviceType>().Where(x => x.Text != "Unknown"))">
+                                        <option selected="selected" value="">Please select</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <a onclick="openDocumentation()" class="btn btn-warning">Device documentation</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input form="createForm" class="form-check-input" asp-for="Disabled" type="checkbox" />
+                                <label class="form-check-label" asp-for="Disabled">
+                                    Disabled
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input form="createForm" class="form-check-input" asp-for="WillReportState" type="checkbox" />
+                                <label class="form-check-label" asp-for="WillReportState">
+                                    Will Report State
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="RoomHint">Room Hint</label>
+                            <input form="createForm" class="form-control" placeholder="Room Hint" asp-for="RoomHint" autofocus>
+                        </div>
+                    </fieldset>
+
+                    <div class="card">
+                        <div class="card-header dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#NameInfo">Name Information</div>
+                        <div id="NameInfo" class="card-body collapse show">
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="DefaultNames">Default Names</label>
+                                <input form="createForm" class="form-control" placeholder="Default Names" asp-for="DefaultNames" autofocus disabled>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Name">Name</label>
+                                <input form="createForm" class="form-control" placeholder="Name" asp-for="Name" autofocus>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Nicknames">Nicknames</label>
+                                <input form="createForm" class="form-control" placeholder="Nicknames" asp-for="Nicknames" autofocus disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#ManufacturerInfo">Manufacturer Information</div>
+                        <div id="ManufacturerInfo" class="card-body collapse">
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Manufacturer">Manufacturer</label>
+                                <input form="createForm" class="form-control" placeholder="Manufacturer" asp-for="Manufacturer" autofocus>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Model">Model</label>
+                                <input form="createForm" class="form-control" placeholder="Model" asp-for="Model" autofocus>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="HwVersion">Hardware Version</label>
+                                <input form="createForm" class="form-control" placeholder="Hardware Version" asp-for="HwVersion" autofocus>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="SwVersion">Software Version</label>
+                                <input form="createForm" class="form-control" placeholder="Software Version" asp-for="SwVersion" autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="mb-0">
+                        <button form="createForm" class="btn btn-primary" name="button" value="create">Create</button>
+                        <a asp-controller="GoogleDevice" asp-action="Index" class="btn btn-default">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

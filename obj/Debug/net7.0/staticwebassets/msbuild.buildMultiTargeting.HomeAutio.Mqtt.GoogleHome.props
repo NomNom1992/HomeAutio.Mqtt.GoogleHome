@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\HomeAutio.Mqtt.GoogleHome.props" />
+</Project>

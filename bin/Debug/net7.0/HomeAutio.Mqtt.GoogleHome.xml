@@ -1,0 +1,3682 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HomeAutio.Mqtt.GoogleHome</name>
+    </assembly>
+    <members>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.ActionFilters.ExportModelStateAttribute">
+            <summary>
+            Export model state attribute.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.ActionFilters.ExportModelStateAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.ActionFilters.ImportModelStateAttribute">
+            <summary>
+            Import model state attribute.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.ActionFilters.ImportModelStateAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.ActionFilters.ModelStateTransfer">
+            <summary>
+            Model state transfer.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.ActionFilters.ModelStateTransfer.Key">
+            <summary>
+            Temp data key.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.ActionFilters.ModelStateTransfer.SerialiseModelState(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Serializes model state.
+            </summary>
+            <param name="modelState">The model state dictionary.</param>
+            <returns>A serialized string.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.ActionFilters.ModelStateTransfer.DeserialiseModelState(System.String)">
+            <summary>
+            Deserializes model state.
+            </summary>
+            <param name="serialisedErrorList">Serialized error list.</param>
+            <returns>A <see cref="T:Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.ActionFilters.ModelStateTransfer.ModelStateTransferValue">
+            <summary>
+            Model state transfer value class.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ActionFilters.ModelStateTransfer.ModelStateTransferValue.Key">
+            <summary>
+            Key.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ActionFilters.ModelStateTransfer.ModelStateTransferValue.AttemptedValue">
+            <summary>
+            Attempted value.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ActionFilters.ModelStateTransfer.ModelStateTransferValue.RawValue">
+            <summary>
+            Raw value.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ActionFilters.ModelStateTransfer.ModelStateTransferValue.ErrorMessages">
+            <summary>
+            Error messages.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.AppStart.JsonSerializerConfig">
+            <summary>
+            JSON Serializer configuration.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.AppStart.JsonSerializerConfig.Configure">
+            <summary>
+            Configure the JSON Serializer.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController">
+            <summary>
+            Devices controller.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.#ctor(HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository,HomeAutio.Mqtt.GoogleHome.IntentHandlers.SyncIntentHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController"/> class.
+            </summary>
+            <param name="deviceRepository">Device repository.</param>
+            <param name="syncIntentHandler">Sync intent handler.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Index">
+            <summary>
+            Index.
+            </summary>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.SyncValidate">
+            <summary>
+            Gets a SYNC intent response for external validation.
+            </summary>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Json">
+            <summary>
+            Gets a device json for external validation.
+            </summary>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Create">
+            <summary>
+            Create device.
+            </summary>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Create(HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel)">
+            <summary>
+            Create device.
+            </summary>
+            <param name="viewModel">View Model.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Delete(System.String)">
+            <summary>
+            Delete device.
+            </summary>
+            <param name="deviceId">Device id.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Edit(System.String)">
+            <summary>
+            Edit device.
+            </summary>
+            <param name="deviceId">Device id.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Edit(System.String,HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel)">
+            <summary>
+            Edit device.
+            </summary>
+            <param name="deviceId">Device id.</param>
+            <param name="viewModel">View Model.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleHomeController">
+            <summary>
+            Google home controller.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleHomeController.#ctor(HomeAutio.Mqtt.GoogleHome.IntentHandlers.SyncIntentHandler,HomeAutio.Mqtt.GoogleHome.IntentHandlers.QueryIntentHandler,HomeAutio.Mqtt.GoogleHome.IntentHandlers.ExecuteIntentHandler,HomeAutio.Mqtt.GoogleHome.IntentHandlers.DisconnectIntentHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleHomeController"/> class.
+            </summary>
+            <param name="syncIntentHandler">Sync intent handler.</param>
+            <param name="queryIntentHandler">Query ntent handler.</param>
+            <param name="executeIntentHandler">Execute intent handler.</param>
+            <param name="disconnectIntentHandler">Disconnect intent handler.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleHomeController.Post(HomeAutio.Mqtt.GoogleHome.Models.Request.Request)">
+            <summary>
+            Post handler.
+            </summary>
+            <param name="request">Request.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleTraitController">
+            <summary>
+            Traits controller.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleTraitController.#ctor(HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleTraitController"/> class.
+            </summary>
+            <param name="deviceRepository">Device repository.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleTraitController.Create(System.String)">
+            <summary>
+            Edit device.
+            </summary>
+            <param name="deviceId">Device id.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleTraitController.Create(System.String,HomeAutio.Mqtt.GoogleHome.ViewModels.TraitViewModel)">
+            <summary>
+            Edit trait.
+            </summary>
+            <param name="deviceId">Device id.</param>
+            <param name="viewModel">View Model.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleTraitController.Delete(System.String,System.String)">
+            <summary>
+            Delete device.
+            </summary>
+            <param name="deviceId">Device id.</param>
+            <param name="traitId">Trait id.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleTraitController.Edit(System.String,System.String)">
+            <summary>
+            Edit device.
+            </summary>
+            <param name="deviceId">Device id.</param>
+            <param name="traitId">Trait id.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleTraitController.Edit(System.String,System.String,HomeAutio.Mqtt.GoogleHome.ViewModels.TraitViewModel)">
+            <summary>
+            Edit trait.
+            </summary>
+            <param name="deviceId">Device id.</param>
+            <param name="traitId">Trait id.</param>
+            <param name="viewModel">View Model.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleTraitController.Examples(System.String)">
+            <summary>
+            Get trait examples.
+            </summary>
+            <param name="traitId">Trait id.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Controllers.GoogleTraitController.GetWrappedCommandExample(System.String,System.String)">
+            <summary>
+            Generates a pure command delegation mode example for the specified command.
+            </summary>
+            <param name="commandName">Command name.</param>
+            <param name="example">Example.</param>
+            <returns>Command delegation example string.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Exceptions.GoogleHomeGraphAuthException">
+            <summary>
+            GoogleHomeGraph auth exception.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Exceptions.GoogleHomeGraphAuthException.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Exceptions.GoogleHomeGraphAuthException.#ctor(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Exceptions.GoogleHomeGraphAuthException.#ctor(System.String,System.Exception)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Exceptions.GoogleHomeGraphAuthException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <inheritdoc/>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Extensions.ConfigurationExtensions">
+            <summary>
+            Configuration extensions.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.ConfigurationExtensions.GetRequiredValue``1(Microsoft.Extensions.Configuration.IConfiguration,System.String)">
+            <summary>
+            Extracts the value with the specified key and converts it to type T.
+            </summary>
+            <typeparam name="T">The type to convert the value to.</typeparam>
+            <param name="configuration">The configuration.</param>
+            <param name="key">The key of the configuration section's value to convert.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Extensions.DictionaryExtensions">
+            <summary>
+            Dictionary extensions.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.DictionaryExtensions.ToFlatDictionary(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">
+            <summary>
+            Flattens a nested dictionary with keys joined by the specified delimiter.
+            </summary>
+            <param name="source">Source dictionary.</param>
+            <param name="delimiter">Delimiter.</param>
+            <returns>A flattened Dictionary.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.DictionaryExtensions.ToNestedDictionary(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">
+            <summary>
+            Flattens a nested dictionary with keys joined by the specified delimiter.
+            </summary>
+            <param name="source">Source dictionary.</param>
+            <param name="delimiter">Delimiter.</param>
+            <returns>A flattened Dictionary.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.DictionaryExtensions.ConvertArrayKeys(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Recusively converts array structures in a Dictionary heirarchy.
+            </summary>
+            <param name="source">Source dictionary.</param>
+            <returns>A flattened Dictionary.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.DictionaryExtensions.ArrayRegex">
+            <remarks>
+            Pattern explanation:<br/>
+            <code>
+            ○ Match if at the beginning of the string.<br/>
+            ○ Match '['.<br/>
+            ○ Match a Unicode digit atomically at least once.<br/>
+            ○ Match ']'.<br/>
+            ○ Match if at the end of the string or if before an ending newline.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Extensions.EnumExtensions">
+            <summary>
+            Enum extensions.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.EnumExtensions.ToEnumString(System.Enum)">
+            <summary>
+            Gets <see cref="T:System.Runtime.Serialization.EnumMemberAttribute"/> value for an enum value.
+            </summary>
+            <param name="enumValue">Enum value to convert.</param>
+            <returns>The <see cref="T:System.Runtime.Serialization.EnumMemberAttribute"/> value.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.EnumExtensions.ToEnum``1(System.String)">
+            <summary>
+            Gets an enum value by its <see cref="T:System.Runtime.Serialization.EnumMemberAttribute"/> value.
+            </summary>
+            <typeparam name="T">Type of enum.</typeparam>
+            <param name="str">String to convert.</param>
+            <returns>The enum value.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Extensions.JsonSchemaExtensions">
+            <summary>
+            JSON schema extensions.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.JsonSchemaExtensions.GetEnumValuesForFlattenedPath(NJsonSchema.JsonSchema,System.String)">
+            <summary>
+            Gets the Google type for the specified path is valid for this schema.
+            </summary>
+            <param name="schema">JSON Schema.</param>
+            <param name="flattenedPath">Flattened state path.</param>
+            <returns>The <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.State.GoogleType"/> for the specified path.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.JsonSchemaExtensions.GetGoogleTypeForFlattenedPath(NJsonSchema.JsonSchema,System.String)">
+            <summary>
+            Gets the Google type for the specified path is valid for this schema.
+            </summary>
+            <param name="schema">JSON Schema.</param>
+            <param name="flattenedPath">Flattened state path.</param>
+            <returns>The <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.State.GoogleType"/> for the specified path.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.JsonSchemaExtensions.FlattenedPathExists(NJsonSchema.JsonSchema,System.String)">
+            <summary>
+            Validates if the specified path is valid for this schema.
+            </summary>
+            <param name="schema">JSON Schema.</param>
+            <param name="flattenedPath">Flattened state path.</param>
+            <returns><c>true</c> if path is valid for schema, otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.JsonSchemaExtensions.GetByFlattenedPath(NJsonSchema.JsonSchema,System.String)">
+            <summary>
+            Gets the schema item for the specified path for this schema.
+            </summary>
+            <param name="schema">JSON Schema.</param>
+            <param name="flattenedPath">Flattened state path.</param>
+            <returns>A list of matching <see cref="T:NJsonSchema.JsonSchema"/> for the specified path.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Extensions.JsonSchemaExtensions.ArrayRegex">
+            <remarks>
+            Pattern explanation:<br/>
+            <code>
+            ○ Match if at the beginning of the string.<br/>
+            ○ Match '['.<br/>
+            ○ Match a Unicode digit atomically at least once.<br/>
+            ○ Match ']'.<br/>
+            ○ Match if at the end of the string or if before an ending newline.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository">
+            <summary>
+            Google device repository.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository.#ctor(Microsoft.Extensions.Logging.ILogger{HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository},Easy.MessageHub.IMessageHub,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository"/> class.
+            </summary>
+            <param name="logger">Logging instance.</param>
+            <param name="messageHub">Message nhub.</param>
+            <param name="path">Device config file path.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository.Add(HomeAutio.Mqtt.GoogleHome.Models.State.Device)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository.Contains(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository.Delete(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository.FindById(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository.GetAll">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository.GetDetached(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository.Refresh">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository.Update(System.String,HomeAutio.Mqtt.GoogleHome.Models.State.Device)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository.ChangeDeviceId(System.String,System.String)">
+            <summary>
+            Changes the device ID for a device.
+            </summary>
+            <param name="originalId">Original ID.</param>
+            <param name="newId">New ID.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleDeviceRepository.Persist">
+            <summary>
+            Persists current device confiuguration.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.GoogleHomeGraphClient">
+            <summary>
+            Google Home Graph API client.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleHomeGraphClient.#ctor(Microsoft.Extensions.Logging.ILogger{HomeAutio.Mqtt.GoogleHome.GoogleHomeGraphClient},System.Net.Http.HttpClient,HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.GoogleHomeGraphClient"/> class.
+            </summary>
+            <param name="logger">Logging instance.</param>
+            <param name="httpClient">HttpClient factory.</param>
+            <param name="serviceAccount">Service account information.</param>
+            <param name="agentUserId">Agent user id.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleHomeGraphClient.RequestSyncAsync(System.Boolean)">
+            <summary>
+            Send Google Home Graph request sync.
+            </summary>
+            <param name="isAsync">Indicates if the sync request should return immediately or wait for a response.</param>
+            <returns>An awaitable <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleHomeGraphClient.SendUpdatesAsync(System.Collections.Generic.IList{HomeAutio.Mqtt.GoogleHome.Models.State.Device},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Send updates to the Google Home Graph.
+            </summary>
+            <param name="devices">Devices updated.</param>
+            <param name="stateCache">Current state cache.</param>
+            <returns>An awaitable <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleHomeGraphClient.CreateJwt">
+            <summary>
+            Gets a JWT token.
+            </summary>
+            <returns>A JWT token.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleHomeGraphClient.GetAccessToken">
+            <summary>
+            Gets an access token using the passed JWT request.
+            </summary>
+            <returns>An <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.AccessTokenResponse"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleHomeGraphClient.GetGoogleHomeGraphApiSigningKey">
+            <summary>
+            Gets the Google Home Graph API signing key.
+            </summary>
+            <returns>A <see cref="T:Microsoft.IdentityModel.Tokens.RsaSecurityKey"/> for building an RSA key.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.GoogleHomeGraphClient.SendRequestAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Sends a HomeGraph API request.
+            </summary>
+            <param name="requestMessage">Request message.</param>
+            <returns>An <see cref="T:System.Net.Http.HttpResponseMessage"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Identity.Clients">
+            <summary>
+            Identity in memory clients.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.Clients.Get(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Gets static in memory clients based on configuration.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <returns>A list of <see cref="T:IdentityServer4.Models.Client"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Identity.GracefulRefreshTokenService">
+            <summary>
+            Refresh token service with a grace period.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.GracefulRefreshTokenService.#ctor(IdentityServer4.Stores.IRefreshTokenStore,IdentityServer4.Services.IProfileService,Microsoft.AspNetCore.Authentication.ISystemClock,Microsoft.Extensions.Logging.ILogger{HomeAutio.Mqtt.GoogleHome.Identity.GracefulRefreshTokenService},System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.Identity.GracefulRefreshTokenService" /> class.
+            </summary>
+            <param name="refreshTokenStore">The refresh token store.</param>
+            <param name="profile">The profile.</param>
+            <param name="clock">The clock.</param>
+            <param name="logger">The logger.</param>
+            <param name="refreshTokenGracePeriod">RefreshToken grace period.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.GracefulRefreshTokenService.AcceptConsumedTokenAsync(IdentityServer4.Models.RefreshToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Identity.IPersistedGrantStoreWithExpiration">
+            <summary>
+            Persisted grant store with extra expiration methods.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.IPersistedGrantStoreWithExpiration.RemoveAllExpiredAsync">
+            <summary>
+            Removes expired grants.
+            </summary>
+            <returns>An awaitable <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore">
+            <summary>
+            Persisted grant store.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore.#ctor(Microsoft.Extensions.Logging.ILogger{HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore"/> class.
+            </summary>
+            <param name="logger">Logging instance.</param>
+            <param name="configuration">Conffguration.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore.StoreAsync(IdentityServer4.Models.PersistedGrant)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore.GetAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore.GetAllAsync(IdentityServer4.Stores.PersistedGrantFilter)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore.RemoveAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore.RemoveAllAsync(IdentityServer4.Stores.PersistedGrantFilter)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore.RemoveAllExpiredAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore.RestoreFromFile">
+            <summary>
+            Initialize current state from file.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.PersistedGrantStore.WriteToFileAsync">
+            <summary>
+            Write the current state to file.
+            </summary>
+            <returns>An awaitable <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Identity.Resources">
+            <summary>
+            Identity in memory resources.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.Resources.GetIdentityResources">
+            <summary>
+            Gets static list of identity resources based on configuration.
+            </summary>
+            <returns>A list of <see cref="T:IdentityServer4.Models.IdentityResource"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.Resources.GetApiScopes">
+            <summary>
+            Gets static list of api scopes.
+            </summary>
+            <returns>A list of <see cref="T:IdentityServer4.Models.ApiScope"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Identity.TokenCleanup">
+            <summary>
+            Token cleanup processor.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.TokenCleanup.#ctor(Microsoft.Extensions.Logging.ILogger{HomeAutio.Mqtt.GoogleHome.Identity.TokenCleanup},HomeAutio.Mqtt.GoogleHome.Identity.IPersistedGrantStoreWithExpiration,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.Identity.TokenCleanup"/> class.
+            </summary>
+            <param name="logger">Logging instance.</param>
+            <param name="grantStore">Grant store.</param>
+            <param name="interval">Interval.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.TokenCleanup.Start(System.Threading.CancellationToken)">
+            <summary>
+            Starts the token cleanup polling.
+            </summary>
+            <param name="cancellationToken">Cancellation token.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.TokenCleanup.Stop">
+            <summary>
+            Stops the token cleanup polling.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.TokenCleanup.RemoveExpiredGrantsAsync">
+            <summary>
+            Method to clear expired persisted grants.
+            </summary>
+            <returns>An awaitable <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Identity.Users">
+            <summary>
+            Identity in memory users.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Identity.Users.Get(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Gets static list of in memory users based on configuration.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <returns>A list of <see cref="T:IdentityServer4.Test.TestUser"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository">
+            <summary>
+            Google device repository.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository.Add(HomeAutio.Mqtt.GoogleHome.Models.State.Device)">
+            <summary>
+            Adds a device.
+            </summary>
+            <param name="device">Device to add.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository.Contains(System.String)">
+            <summary>
+            Determines if the device is contained in the repository.
+            </summary>
+            <param name="deviceId">Device id.</param>
+            <returns><c>true</c> if present, else <c>false</c>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository.Delete(System.String)">
+            <summary>
+            Deletes a device.
+            </summary>
+            <param name="deviceId">Device Id to delete.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository.FindById(System.String)">
+            <summary>
+            Gets a device by id.
+            </summary>
+            <param name="deviceId">Device Id to get.</param>
+            <returns>The <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.State.Device"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository.GetAll">
+            <summary>
+            Gets all devices.
+            </summary>
+            <returns>A list of <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.State.Device"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository.GetDetached(System.String)">
+            <summary>
+            Gets a device detached from the repository.
+            </summary>
+            <param name="deviceId">Device Id to get.</param>
+            <returns>The detached <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.State.Device"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository.Refresh">
+            <summary>
+            Refreshes deice configuration from file.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository.Update(System.String,HomeAutio.Mqtt.GoogleHome.Models.State.Device)">
+            <summary>
+            Updates a device.
+            </summary>
+            <param name="deviceId">Device ID to update.</param>
+            <param name="device">Device to update.</param>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.IntentHandlers.DisconnectIntentHandler">
+            <summary>
+            Sync intent handler.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IntentHandlers.DisconnectIntentHandler.#ctor(Microsoft.Extensions.Logging.ILogger{HomeAutio.Mqtt.GoogleHome.IntentHandlers.DisconnectIntentHandler})">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.IntentHandlers.DisconnectIntentHandler"/> class.
+            </summary>
+            <param name="logger">Logging instance.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IntentHandlers.DisconnectIntentHandler.Handle(HomeAutio.Mqtt.GoogleHome.Models.Request.DisconnectIntent)">
+            <summary>
+            Handles a <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Request.DisconnectIntent"/>.
+            </summary>
+            <param name="intent">Intent to process.</param>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.IntentHandlers.ExecuteIntentHandler">
+            <summary>
+            Execute intent handler.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IntentHandlers.ExecuteIntentHandler.#ctor(Microsoft.Extensions.Logging.ILogger{HomeAutio.Mqtt.GoogleHome.IntentHandlers.ExecuteIntentHandler},Easy.MessageHub.IMessageHub,HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository,HomeAutio.Mqtt.GoogleHome.Models.State.StateCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.IntentHandlers.ExecuteIntentHandler"/> class.
+            </summary>
+            <param name="logger">Logging instance.</param>
+            <param name="messageHub">Message nhub.</param>
+            <param name="deviceRepository">Device repository.</param>
+            <param name="stateCache">State cache,</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IntentHandlers.ExecuteIntentHandler.Handle(HomeAutio.Mqtt.GoogleHome.Models.Request.ExecuteIntent)">
+            <summary>
+            Handles a <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Request.ExecuteIntent"/>.
+            </summary>
+            <param name="intent">Intent to process.</param>
+            <returns>A <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Response.ExecutionResponsePayload"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IntentHandlers.ExecuteIntentHandler.ValidateChallenges(HomeAutio.Mqtt.GoogleHome.Models.State.Device,HomeAutio.Mqtt.GoogleHome.Models.Request.Execution)">
+            <summary>
+            Checks if the command is a delegated command for the given device.
+            </summary>
+            <param name="device">Device to check.</param>
+            <param name="execution">Command execution to check.</param>
+            <returns><c>true</c> if command is handled as a delegated command, otherwise <c>false</c>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.IntentHandlers.QueryIntentHandler">
+            <summary>
+            Query intent handler.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IntentHandlers.QueryIntentHandler.#ctor(Microsoft.Extensions.Logging.ILogger{HomeAutio.Mqtt.GoogleHome.IntentHandlers.QueryIntentHandler},Easy.MessageHub.IMessageHub,HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository,HomeAutio.Mqtt.GoogleHome.Models.State.StateCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.IntentHandlers.QueryIntentHandler"/> class.
+            </summary>
+            <param name="logger">Logging instance.</param>
+            <param name="messageHub">Message hub.</param>
+            <param name="deviceRepository">Device repository.</param>
+            <param name="stateCache">State cache.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IntentHandlers.QueryIntentHandler.Handle(HomeAutio.Mqtt.GoogleHome.Models.Request.QueryIntent)">
+            <summary>
+            Handles a <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Request.QueryIntent"/>.
+            </summary>
+            <param name="intent">Intent to process.</param>
+            <returns>A <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Response.QueryResponsePayload"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.IntentHandlers.SyncIntentHandler">
+            <summary>
+            Sync intent handler.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IntentHandlers.SyncIntentHandler.#ctor(Microsoft.Extensions.Logging.ILogger{HomeAutio.Mqtt.GoogleHome.IntentHandlers.SyncIntentHandler},Easy.MessageHub.IMessageHub,Microsoft.Extensions.Configuration.IConfiguration,HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.IntentHandlers.SyncIntentHandler"/> class.
+            </summary>
+            <param name="logger">Logging instance.</param>
+            <param name="messageHub">Message nhub.</param>
+            <param name="configuration">Configuration.</param>
+            <param name="deviceRepository">Device repository.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.IntentHandlers.SyncIntentHandler.Handle(HomeAutio.Mqtt.GoogleHome.Models.Request.SyncIntent)">
+            <summary>
+            Handles a <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Request.SyncIntent"/>.
+            </summary>
+            <param name="intent">Intent to process.</param>
+            <returns>A <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Response.SyncResponsePayload"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.JsonConverters.ChallengeJsonConverter">
+            <summary>
+            The converter to use when deserializing value map objects
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.ChallengeJsonConverter.GetTargetType(System.Type,Newtonsoft.Json.Linq.JObject)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.JsonConverters.CustomJsonConverter`1">
+            <summary>
+            Custom converter to convert objects to and from JSON
+            </summary>
+            <typeparam name="T">The type of object being passed in</typeparam>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.JsonConverters.CustomJsonConverter`1.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.CustomJsonConverter`1.GetTargetType(System.Type,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Abstract method which gets the right type to deserialize to.
+            </summary>
+            <param name="objectType">The base type of object to create.</param>
+            <param name="jsonObject">The source JSON object.</param>
+            <returns>An instance of the specified type.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.CustomJsonConverter`1.CanConvert(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.CustomJsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.CustomJsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.JsonConverters.IntentJsonConverter">
+            <summary>
+            The converter to use when deserializing intent objects
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.IntentJsonConverter.GetTargetType(System.Type,Newtonsoft.Json.Linq.JObject)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.JsonConverters.ObjectDictionaryConverter">
+            <summary>
+            Object dictionary converter.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.ObjectDictionaryConverter.CanConvert(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.ObjectDictionaryConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.ObjectDictionaryConverter.ReadValue(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Reads the current value.
+            </summary>
+            <param name="reader">JSON reader.</param>
+            <returns>The read object.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.ObjectDictionaryConverter.ReadArray(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Reads the current array value.
+            </summary>
+            <param name="reader">JSON reader.</param>
+            <returns>The read object.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.ObjectDictionaryConverter.ReadObject(Newtonsoft.Json.JsonReader)">
+            <summary>
+            Reads the current object value.
+            </summary>
+            <param name="reader">JSON reader.</param>
+            <returns>The read object.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.ObjectDictionaryConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.ObjectDictionaryConverter.WriteValue(Newtonsoft.Json.JsonWriter,System.Object)">
+            <summary>
+            Writes the current value.
+            </summary>
+            <param name="writer">JSON writer.</param>
+            <param name="value">The value to write.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.ObjectDictionaryConverter.WriteObject(Newtonsoft.Json.JsonWriter,System.Object)">
+            <summary>
+            Writes the current object value.
+            </summary>
+            <param name="writer">JSON writer.</param>
+            <param name="value">The value to write.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.ObjectDictionaryConverter.WriteArray(Newtonsoft.Json.JsonWriter,System.Object)">
+            <summary>
+            Writes the current array value.
+            </summary>
+            <param name="writer">JSON writer.</param>
+            <param name="value">The value to write.</param>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.JsonConverters.ValueMapJsonConverter">
+            <summary>
+            The converter to use when deserializing value map objects
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.JsonConverters.ValueMapJsonConverter.GetTargetType(System.Type,Newtonsoft.Json.Linq.JObject)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.CommandToStateKeyMapper">
+            <summary>
+            Command to state key mapper.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.CommandToStateKeyMapper.Map(System.String)">
+            <summary>
+            Maps a command parameter key to a state key.
+            </summary>
+            <remarks>
+            This is possibly the most ill advised implementation in this whole project...
+            </remarks>
+            <param name="commandParameterKey">The command parameter key to map.</param>
+            <returns>The state key.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.CommandType">
+            <summary>
+            Device command types.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Unknown">
+            <summary>
+            Unknown command type.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.ActivateScene">
+            <summary>
+            action.devices.commands.ActivateScene
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.AppInstall">
+            <summary>
+            action.devices.commands.appInstall
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.AppSearch">
+            <summary>
+            action.devices.commands.appSearch
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.AppSelect">
+            <summary>
+            action.devices.commands.appSelect
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.ArmDisarm">
+            <summary>
+            action.devices.commands.ArmDisarm
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.BrightnessAbsolute">
+            <summary>
+            action.devices.commands.BrightnessAbsolute
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.BrightnessRelative">
+            <summary>
+            action.devices.commands.BrightnessRelative
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Charge">
+            <summary>
+            action.devices.commands.Charge
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.ColorAbsolute">
+            <summary>
+            action.devices.commands.ColorAbsolute
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.ColorLoop">
+            <summary>
+            action.devices.commands.ColorLoop
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Cook">
+            <summary>
+            action.devices.commands.Cook
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Dispense">
+            <summary>
+            action.devices.commands.Dispense
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Dock">
+            <summary>
+            action.devices.commands.Dock
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.EnableDisableGuestNetwork">
+            <summary>
+            action.devices.commands.EnableDisableGuestNetwork
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.EnableDisableNetworkProfile">
+            <summary>
+            action.devices.commands.EnableDisableNetworkProfile
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Fill">
+            <summary>
+            action.devices.commands.Fill
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.GetCameraStream">
+            <summary>
+            action.devices.commands.GetCameraStream
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.GetGuestNetworkPassword">
+            <summary>
+            action.devices.commands.GetGuestNetworkPassword
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.HumidityRelative">
+            <summary>
+            action.devices.commands.HumidityRelative
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Locate">
+            <summary>
+            action.devices.commands.Locate
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.LockUnlock">
+            <summary>
+            action.devices.commands.LockUnlock
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.MediaClosedCaptioningOff">
+            <summary>
+            action.devices.commands.mediaClosedCaptioningOff
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.MediaClosedCaptioningOn">
+            <summary>
+            action.devices.commands.mediaClosedCaptioningOn
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.MediaNext">
+            <summary>
+            action.devices.commands.mediaNext
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.MediaPause">
+            <summary>
+            action.devices.commands.mediaPause
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.MediaPrevious">
+            <summary>
+            action.devices.commands.mediaPrevious
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.MediaRepeatMode">
+            <summary>
+            action.devices.commands.mediaRepeatMode
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.MediaResume">
+            <summary>
+            action.devices.commands.mediaResume
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.MediaSeekRelative">
+            <summary>
+            action.devices.commands.mediaSeekRelative
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.MediaSeekToPosition">
+            <summary>
+            action.devices.commands.mediaSeekToPosition
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.MediaShuffle">
+            <summary>
+            action.devices.commands.mediaShuffle
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.MediaStop">
+            <summary>
+            action.devices.commands.mediaStop
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Mute">
+            <summary>
+            action.devices.commands.mute
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.NextInput">
+            <summary>
+            action.devices.commands.NextInput
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.OnOff">
+            <summary>
+            action.devices.commands.OnOff
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.OpenClose">
+            <summary>
+            action.devices.commands.OpenClose
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.OpenCloseRelative">
+            <summary>
+            action.devices.commands.OpenCloseRelative
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.PauseUnpause">
+            <summary>
+            action.devices.commands.PauseUnpause
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.PreviousInput">
+            <summary>
+            action.devices.commands.PreviousInput
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Reboot">
+            <summary>
+            action.devices.commands.Reboot
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.RelativeChannel">
+            <summary>
+            action.devices.commands.relativeChannel
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.ReturnChannel">
+            <summary>
+            action.devices.commands.returnChannel
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Reverse">
+            <summary>
+            action.devices.commands.Reverse
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.RotateAbsolute">
+            <summary>
+            action.devices.commands.RotateAbsolute
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.SelectChannel">
+            <summary>
+            action.devices.commands.selectChannel
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.SetFanSpeed">
+            <summary>
+            action.devices.commands.SetFanSpeed
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.SetFanSpeedRelative">
+            <summary>
+            action.devices.commands.SetFanSpeedRelative
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.SetHumidity">
+            <summary>
+            action.devices.commands.SetHumidity
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.SetInput">
+            <summary>
+            action.devices.commands.SetInput
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.SetModes">
+            <summary>
+            action.devices.commands.SetModes
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.SetTemperature">
+            <summary>
+            action.devices.commands.SetTemperature
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.SetToggles">
+            <summary>
+            action.devices.commands.SetToggles
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.SetVolume">
+            <summary>
+            action.devices.commands.setVolume
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Sleep">
+            <summary>
+            action.devices.commands.Sleep
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.SoftwareUpdate">
+            <summary>
+            action.devices.commands.SoftwareUpdate
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.StartStop">
+            <summary>
+            action.devices.commands.StartStop
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.StopEffect">
+            <summary>
+            action.devices.commands.StopEffect
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.TemperatureRelative">
+            <summary>
+            action.devices.commands.TemperatureRelative
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.TestNetworkSpeed">
+            <summary>
+            action.devices.commands.TestNetworkSpeed
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.ThermostatSetMode">
+            <summary>
+            action.devices.commands.ThermostatSetMode
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.ThermostatTemperatureSetpoint">
+            <summary>
+            action.devices.commands.ThermostatTemperatureSetpoint
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.ThermostatTemperatureSetRange">
+            <summary>
+            action.devices.commands.ThermostatTemperatureSetRange
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.TimerAdjust">
+            <summary>
+            action.devices.commands.TimerAdjust
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.TimerCancel">
+            <summary>
+            action.devices.commands.TimerCancel
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.TimerPause">
+            <summary>
+            action.devices.commands.TimerPause
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.TimerResume">
+            <summary>
+            action.devices.commands.TimerResume
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.TimerStart">
+            <summary>
+            action.devices.commands.TimerStart
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.VolumeRelative">
+            <summary>
+            action.devices.commands.volumeRelative
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.CommandType.Wake">
+            <summary>
+            action.devices.commands.Wake
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.DeviceInfo">
+            <summary>
+            Device configuration element.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.DeviceInfo.Manufacturer">
+            <summary>
+            Manufacturer.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.DeviceInfo.Model">
+            <summary>
+            Model.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.DeviceInfo.HwVersion">
+            <summary>
+            Hardware version.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.DeviceInfo.SwVersion">
+            <summary>
+            Software version.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.DeviceType">
+            <summary>
+            Device type enumeration.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.Unknown">
+            <summary>
+            Unknown device type.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.AC_UNIT">
+            <summary>
+            action.devices.types.AC_UNIT.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.AIRCOOLER">
+            <summary>
+            action.devices.types.AIRCOOLER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.AIRFRESHENER">
+            <summary>
+            action.devices.types.AIRFRESHENER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.AIRPURIFIER">
+            <summary>
+            action.devices.types.AIRPURIFIER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.AUDIO_VIDEO_RECEIVER">
+            <summary>
+            action.devices.types.AUDIO_VIDEO_RECEIVER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.AWNING">
+            <summary>
+            action.devices.types.AWNING.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.BATHTUB">
+            <summary>
+            action.devices.types.BATHTUB.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.BED">
+            <summary>
+            action.devices.types.BED.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.BLENDER">
+            <summary>
+            action.devices.types.BLENDER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.BLINDS">
+            <summary>
+            action.devices.types.BLINDS.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.BOILER">
+            <summary>
+            action.devices.types.BOILER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.CAMERA">
+            <summary>
+            action.devices.types.CAMERA.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.CARBON_MONOXIDE_DETECTOR">
+            <summary>
+            action.devices.types.CARBON_MONOXIDE_DETECTOR.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.CHARGER">
+            <summary>
+            action.devices.types.CHARGER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.CLOSET">
+            <summary>
+            action.devices.types.CLOSET.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.COFFEE_MAKER">
+            <summary>
+            action.devices.types.COFFEE_MAKER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.COOKTOP">
+            <summary>
+            action.devices.types.COOKTOP.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.CURTAIN">
+            <summary>
+            action.devices.types.CURTAIN.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.DEHUMIDIFIER">
+            <summary>
+            action.devices.types.DEHUMIDIFIER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.DEHYDRATOR">
+            <summary>
+            action.devices.types.DEHYDRATOR.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.DISHWASHER">
+            <summary>
+            action.devices.types.DISHWASHER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.DOOR">
+            <summary>
+            action.devices.types.DOOR.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.DOORBELL">
+            <summary>
+            action.devices.types.DOORBELL.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.DRAWER">
+            <summary>
+            action.devices.types.DRAWER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.DRYER">
+            <summary>
+            action.devices.types.DRYER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.FAN">
+            <summary>
+            action.devices.types.FAN.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.FAUCET">
+            <summary>
+            action.devices.types.FAUCET.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.FIREPLACE">
+            <summary>
+            action.devices.types.FIREPLACE.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.FREEZER">
+            <summary>
+            action.devices.types.FREEZER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.FRYER">
+            <summary>
+            action.devices.types.FRYER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.GARAGE">
+            <summary>
+            action.devices.types.GARAGE.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.GATE">
+            <summary>
+            action.devices.types.GATE.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.GRILL">
+            <summary>
+            action.devices.types.GRILL.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.HEATER">
+            <summary>
+            action.devices.types.HEATER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.HOOD">
+            <summary>
+            action.devices.types.HOOD.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.HUMIDIFIER">
+            <summary>
+            action.devices.types.HUMIDIFIER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.KETTLE">
+            <summary>
+            action.devices.types.KETTLE.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.LIGHT">
+            <summary>
+            action.devices.types.LIGHT.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.LOCK">
+            <summary>
+            action.devices.types.LOCK.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.MICROWAVE">
+            <summary>
+            action.devices.types.MICROWAVE.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.MOP">
+            <summary>
+            action.devices.types.MOP.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.MOWER">
+            <summary>
+            action.devices.types.MOWER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.MULTICOOKER">
+            <summary>
+            action.devices.types.MULTICOOKER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.NETWORK">
+            <summary>
+            action.devices.types.NETWORK.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.OUTLET">
+            <summary>
+            action.devices.types.OUTLET.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.OVEN">
+            <summary>
+            action.devices.types.OVEN.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.PERGOLA">
+            <summary>
+            action.devices.types.PERGOLA.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.PETFEEDER">
+            <summary>
+            action.devices.types.PETFEEDER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.PRESSURECOOKER">
+            <summary>
+            action.devices.types.PRESSURECOOKER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.RADIATOR">
+            <summary>
+            action.devices.types.RADIATOR.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.REFRIGERATOR">
+            <summary>
+            action.devices.types.REFRIGERATOR.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.REMOTECONTROL">
+            <summary>
+            action.devices.types.REMOTECONTROL.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.ROUTER">
+            <summary>
+            action.devices.types.ROUTER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SCENE">
+            <summary>
+            action.devices.types.SCENE.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SECURITYSYSTEM">
+            <summary>
+            action.devices.types.SECURITYSYSTEM.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SENSOR">
+            <summary>
+            action.devices.types.SENSOR.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SETTOP">
+            <summary>
+            action.devices.types.SETTOP.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SHOWER">
+            <summary>
+            action.devices.types.SHOWER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SHUTTER">
+            <summary>
+            action.devices.types.SHUTTER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SMOKE_DETECTOR">
+            <summary>
+            action.devices.types.SMOKE_DETECTOR.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SOUNDBAR">
+            <summary>
+            action.devices.types.SOUNDBAR.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SOUSVIDE">
+            <summary>
+            action.devices.types.SOUSVIDE.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SPEAKER">
+            <summary>
+            action.devices.types.SPEAKER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SPRINKLER">
+            <summary>
+            action.devices.types.SPRINKLER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.STANDMIXER">
+            <summary>
+            action.devices.types.STANDMIXER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.STREAMING_BOX">
+            <summary>
+            action.devices.types.STREAMING_BOX.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.STREAMING_SOUNDBAR">
+            <summary>
+            action.devices.types.STREAMING_SOUNDBAR.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.STREAMING_STICK">
+            <summary>
+            action.devices.types.STREAMING_STICK.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.SWITCH">
+            <summary>
+            action.devices.types.SWITCH.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.THERMOSTAT">
+            <summary>
+            action.devices.types.THERMOSTAT.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.TV">
+            <summary>
+            action.devices.types.TV.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.VACUUM">
+            <summary>
+            action.devices.types.VACUUM.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.VALVE">
+            <summary>
+            action.devices.types.VALVE.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.WASHER">
+            <summary>
+            action.devices.types.WASHER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.WATERHEATER">
+            <summary>
+            action.devices.types.WATERHEATER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.WATERPURIFIER">
+            <summary>
+            action.devices.types.WATERPURIFIER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.WATERSOFTENER">
+            <summary>
+            action.devices.types.WATERSOFTENER.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.WINDOW">
+            <summary>
+            action.devices.types.WINDOW.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.DeviceType.YOGURTMAKER">
+            <summary>
+            action.devices.types.YOGURTMAKER.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.DeviceTypeIconMapper">
+            <summary>
+            <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.DeviceType"/> to Material icon mapper.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.DeviceTypeIconMapper.Map(HomeAutio.Mqtt.GoogleHome.Models.DeviceType)">
+            <summary>
+            Maps a <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.DeviceType"/> to a known material icon name.
+            </summary>
+            <remarks>
+            Sourced mapping from https://developers.home.google.com/use-cases
+            </remarks>
+            <param name="deviceType">The device type.</param>
+            <returns>The material icon name.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Events.ConfigSubscriptionChangeEvent">
+            <summary>
+            Event for config subscriptions changes.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Events.ConfigSubscriptionChangeEvent.AddedSubscriptions">
+            <summary>
+            Added subscriptions.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Events.ConfigSubscriptionChangeEvent.DeletedSubscriptions">
+            <summary>
+            Deleted subscriptions.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Events.DeviceCommandExecutionEvent">
+            <summary>
+            Device command execution event.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Events.DeviceCommandExecutionEvent.DeviceId">
+            <summary>
+            Device id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Events.DeviceCommandExecutionEvent.Execution">
+            <summary>
+            Execution.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Events.QueryIntentReceivedEvent">
+            <summary>
+            Query intent received event.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Events.QueryIntentReceivedEvent.Devices">
+            <summary>
+            Devices.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Events.QueryIntentReceivedEvent.Time">
+            <summary>
+            Time of event.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Events.ReportStateEvent">
+            <summary>
+            ReportStateAndNotification event.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Events.ReportStateEvent.Devices">
+            <summary>
+            Devices to report state for.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Events.RequestSyncEvent">
+            <summary>
+            REQUEST_SYNC event.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Events.SyncIntentReceivedEvent">
+            <summary>
+            Sync intent received event.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Events.SyncIntentReceivedEvent.Time">
+            <summary>
+            Time of event.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.AccessTokenResponse">
+            <summary>
+            Access token response.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.AccessTokenResponse.AccessToken">
+            <summary>
+            Access token.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.AccessTokenResponse.ExpiresIn">
+            <summary>
+            Expires in.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.AccessTokenResponse.ExpiresAt">
+            <summary>
+            Expires at.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.AccessTokenResponse.CreatedAt">
+            <summary>
+            Created time
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.AccessTokenResponse.RefreshToken">
+            <summary>
+            Refresh token.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.AccessTokenResponse.Scope">
+            <summary>
+            Scope.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.AccessTokenResponse.TokenType">
+            <summary>
+            Token type.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ReportStateAndNotificationDevice">
+            <summary>
+            Devices request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ReportStateAndNotificationDevice.States">
+            <summary>
+            States of devices to update.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ReportStateAndNotificationDevice.Notifications">
+            <summary>
+            Notifications metadata for devices.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ReportStateAndNotificationRequest">
+            <summary>
+            Request envelope.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ReportStateAndNotificationRequest.RequestId">
+            <summary>
+            Request ID used for debugging.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ReportStateAndNotificationRequest.EventId">
+            <summary>
+            Unique identifier per event (for example, a doorbell press).
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ReportStateAndNotificationRequest.AgentUserId">
+            <summary>
+            Agent user id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ReportStateAndNotificationRequest.FollowUpToken">
+            <summary>
+            Token to maintain state in the follow up notification response.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ReportStateAndNotificationRequest.Payload">
+            <summary>
+            Payload.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.RequestSyncRequest">
+            <summary>
+            Request envelope.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.RequestSyncRequest.AgentUserId">
+            <summary>
+            Agent user id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.RequestSyncRequest.Async">
+            <summary>
+            Optional. If set, the request will be added to a queue and a response will be returned immediately. The queue allows for de-duplication of simultaneous requests.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount">
+            <summary>
+            Google service account.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount.Type">
+            <summary>
+            Account type.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount.ProjectId">
+            <summary>
+            Project id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount.PrivateKeyId">
+            <summary>
+            Private key id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount.PrivateKey">
+            <summary>
+            Private key.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount.ClientEmail">
+            <summary>
+            Client email.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount.ClientId">
+            <summary>
+            Client id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount.AuthUri">
+            <summary>
+            Auth URI.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount.TokenUri">
+            <summary>
+            Token URI.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount.AuthProviderX509CertUrl">
+            <summary>
+            Auth provider X509 cert url.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.ServiceAccount.ClientX509CertUrl">
+            <summary>
+            Client X509 cert url.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.StateAndNotificationPayload">
+            <summary>
+            State and notification payload request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.GoogleHomeGraph.StateAndNotificationPayload.Devices">
+            <summary>
+            Devices.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.NameInfo">
+            <summary>
+            Device name info.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.NameInfo.DefaultNames">
+            <summary>
+            Defaul names.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.NameInfo.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.NameInfo.Nicknames">
+            <summary>
+            Nicknames.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.Challenge">
+            <summary>
+            Challenge.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.Challenge.Ack">
+            <summary>
+            Acknowledge.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.Challenge.Pin">
+            <summary>
+            Pin.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.Command">
+            <summary>
+            Command request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.Command.Devices">
+            <summary>
+            Devices to execute against.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.Command.Execution">
+            <summary>
+            Execution details.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.Device">
+            <summary>
+            Device request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.Device.Id">
+            <summary>
+            Device id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.Device.CustomData">
+            <summary>
+            Custom device data.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.DisconnectIntent">
+            <summary>
+            Disconnect intent request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.DisconnectIntent.Intent">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.ExecuteIntent">
+            <summary>
+            Execute intent request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.ExecuteIntent.Intent">
+            <inheritdoc />
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.ExecuteIntent.Payload">
+            <summary>
+            Payload.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.ExecuteIntentPayload">
+            <summary>
+            Execute intent request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.ExecuteIntentPayload.Commands">
+            <summary>
+            Commands to execute.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.Execution">
+            <summary>
+            Execution request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.Execution.Command">
+            <summary>
+            Command name.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.Execution.Params">
+            <summary>
+            Parameters.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.Execution.Challenge">
+            <summary>
+            Challenge details.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.IntentBase">
+            <summary>
+            Intent base request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.IntentBase.Intent">
+            <summary>
+            Intent type.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.IntentType">
+            <summary>
+            Intent type enumeration.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.Request.IntentType.Sync">
+            <summary>
+            action.devices.SYNC.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.Request.IntentType.Query">
+            <summary>
+            action.devices.QUERY.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.Request.IntentType.Execute">
+            <summary>
+            action.devices.EXECUTE.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.Request.IntentType.Disconnect">
+            <summary>
+            action.devices.DISCONNECT.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.QueryIntent">
+            <summary>
+            Query intent request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.QueryIntent.Intent">
+            <inheritdoc />
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.QueryIntent.Payload">
+            <summary>
+            Payload.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.QueryIntentPayload">
+            <summary>
+            Query intent payload request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.QueryIntentPayload.Devices">
+            <summary>
+            Devices to query.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.Request">
+            <summary>
+            Request envelope.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.Request.RequestId">
+            <summary>
+            Request id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.Request.Inputs">
+            <summary>
+            Inputs.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Request.SyncIntent">
+            <summary>
+            Sync intent request object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Request.SyncIntent.Intent">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Response.ChallengeResponse">
+            <summary>
+            Challenge response.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.ChallengeResponse.Type">
+            <summary>
+            Type of challenge needed.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Response.Command">
+            <summary>
+            Command response object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Command.Ids">
+            <summary>
+            Ids executed against.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Command.Status">
+            <summary>
+            Status of command.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Command.States">
+            <summary>
+            New states of devices.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Command.DebugString">
+            <summary>
+            Debug string.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Command.ErrorCode">
+            <summary>
+            Error code.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Command.ChallengeNeeded">
+            <summary>
+            Challenges needed to complete original command.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Response.CommandStatus">
+            <summary>
+            Command status enumeration.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.Response.CommandStatus.Pending">
+            <summary>
+            PENDING.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.Response.CommandStatus.Success">
+            <summary>
+            SUCCESS.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.Response.CommandStatus.Offline">
+            <summary>
+            OFFLINE.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.Response.CommandStatus.Error">
+            <summary>
+            ERROR.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Response.Device">
+            <summary>
+            Device response object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Device.Id">
+            <summary>
+            Device id..
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Device.Type">
+            <summary>
+            Device type.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Device.Name">
+            <summary>
+            Device name information.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Device.WillReportState">
+            <summary>
+            Whether device will report state.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Device.RoomHint">
+            <summary>
+            Room hint.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Device.DeviceInfo">
+            <summary>
+            Device information.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Device.Traits">
+            <summary>
+            Supported traits.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Device.Attributes">
+            <summary>
+            Attributes.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Device.CustomData">
+            <summary>
+            Custom data.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Response.ErrorResponsePayload">
+            <summary>
+            Error response payload reponse object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.ErrorResponsePayload.DebugString">
+            <summary>
+            Debug string.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.ErrorResponsePayload.ErrorCode">
+            <summary>
+            Error code.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Response.ExecutionResponsePayload">
+            <summary>
+            Execution response payload response object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.ExecutionResponsePayload.Commands">
+            <summary>
+            Commands.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Response.QueryResponsePayload">
+            <summary>
+            Query response payload response object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.QueryResponsePayload.Devices">
+            <summary>
+            Devices.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Response.Response">
+            <summary>
+            Response envelope.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Response.RequestId">
+            <summary>
+            Request id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.Response.Payload">
+            <summary>
+            Payload.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Response.SyncResponsePayload">
+            <summary>
+            Sync response payload response object.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.SyncResponsePayload.AgentUserId">
+            <summary>
+            Agent user id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Response.SyncResponsePayload.Devices">
+            <summary>
+            Devices.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.AttributeSchema">
+            <summary>
+            Attribute schema.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.AttributeSchema.Json">
+            <summary>
+            JSON.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.AttributeSchema.Examples">
+            <summary>
+            Examples.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.AttributeSchema.Validator">
+            <summary>
+            Validator instance.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.AttributeSchema.FromJson(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Instantiates from supplied JSON string.
+            </summary>
+            <param name="json">JSON to parse.</param>
+            <param name="cancellationToken">Cancellation token.</param>
+            <returns>An instantiated <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.AttributeSchema"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.AttributeSchema.ExtractExamples(System.String)">
+            <summary>
+            Extract example JSON from a schema.
+            </summary>
+            <param name="json">Schema JSON to parse.</param>
+            <returns>A list of <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.SchemaExample"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema">
+            <summary>
+            Command schema.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.Command">
+            <summary>
+            Command type.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.ErrorJson">
+            <summary>
+            Error JSON.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.Examples">
+            <summary>
+            Examples.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.ParamJson">
+            <summary>
+            Param JSON.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.ResultsJson">
+            <summary>
+            Result JSON.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.ResultsValidator">
+            <summary>
+            Results validator instance.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.ResultsExamples">
+            <summary>
+            Results examples.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.Validator">
+            <summary>
+            Validator instance.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.FromJson(HomeAutio.Mqtt.GoogleHome.Models.CommandType,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Instantiates from supplied JSON string.
+            </summary>
+            <param name="commandType">Command type.</param>
+            <param name="paramJson">Param JSON to parse.</param>
+            <param name="resultsJson">Results JSON to parse.</param>
+            <param name="errorJson">Error JSON to parse.</param>
+            <param name="cancellationToken">Cancellation token.</param>
+            <returns>An instantiated <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.ChangeOneOfsToAnyOfs(NJsonSchema.JsonSchema)">
+            <summary>
+            Change OneOfs to AnyOfs.
+            </summary>
+            <param name="schema">JSON Schema.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.ChangeLeafNodesToString(NJsonSchema.JsonSchema)">
+            <summary>
+            Changes the leaf node type to string.
+            </summary>
+            <param name="schema">Schema to modify.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.ExtractExamples(System.String)">
+            <summary>
+            Extract example JSON from a schema.
+            </summary>
+            <param name="json">Schema JSON to parse.</param>
+            <returns>A list of <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.SchemaExample"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.CommandSchema.ExtractResultExamples(System.String)">
+            <summary>
+            Extract example JSON from a schema.
+            </summary>
+            <param name="json">Schema JSON to parse.</param>
+            <returns>A list of <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.SchemaExample"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.SchemaExample">
+            <summary>
+            Schema example.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.SchemaExample.Comment">
+            <summary>
+            Comment.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.SchemaExample.Example">
+            <summary>
+            Example.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.StateSchema">
+            <summary>
+            State schema.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.StateSchema.Json">
+            <summary>
+            JSON.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.StateSchema.Examples">
+            <summary>
+            Examples.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.StateSchema.Validator">
+            <summary>
+            Validator instance.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.StateSchema.FromJson(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Instantiates from supplied JSON string.
+            </summary>
+            <param name="json">JSON to parse.</param>
+            <param name="cancellationToken">Cancellation token.</param>
+            <returns>An instantiated <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.StateSchema"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.StateSchema.ExtractExamples(System.String)">
+            <summary>
+            Extract example JSON from a schema.
+            </summary>
+            <param name="json">Schema JSON to parse.</param>
+            <returns>A list of <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.SchemaExample"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema">
+            <summary>
+            Trait schema.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema.AttributeSchema">
+            <summary>
+            Attribute schema.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema.CommandSchemas">
+            <summary>
+            Command schema JSONs.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema.StateSchema">
+            <summary>
+            State schema.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema.Trait">
+            <summary>
+            Trait type.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema.ForTraitType(HomeAutio.Mqtt.GoogleHome.Models.TraitType,System.Threading.CancellationToken)">
+            <summary>
+            Instantiates from embedded resources for specified trait type.
+            </summary>
+            <param name="traitType">Trait type.</param>
+            <param name="cancellationToken">Cancellation token.</param>
+            <returns>An instantiated <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema.GetGoogleTypeForFlattenedPath(System.String)">
+            <summary>
+            Gets the Google type for the specified path is valid for this schema.
+            </summary>
+            <param name="flattenedPath">Flattened state path.</param>
+            <returns>The <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.State.GoogleType"/> for the specified path.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema.GetEnumValuesForFlattenedPath(System.String)">
+            <summary>
+            Gets the enum values, if any, for the specified path for this schema.
+            </summary>
+            <param name="flattenedPath">Flattened state path.</param>
+            <returns>The enum values, or null if not an enum.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema.GetResourceString(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets resource file contents as string.
+            </summary>
+            <param name="resourceName">Resource name to retrieve.</param>
+            <param name="resources">Available resource files.</param>
+            <returns>Resource file contents.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.SigningCertificate">
+            <summary>
+            Signing certificate.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.SigningCertificate.File">
+            <summary>
+            File path.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.SigningCertificate.PassPhrase">
+            <summary>
+            Pass phrase for the certificate.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.AcknowledgeChallenge">
+            <summary>
+            Acknowledge challenge.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.AcknowledgeChallenge.Type">
+            <inheritdoc />
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.AcknowledgeChallenge.ChallengeNeededPhrase">
+            <inheritdoc />
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.AcknowledgeChallenge.ChallengeRejectedPhrase">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.AcknowledgeChallenge.Validate(HomeAutio.Mqtt.GoogleHome.Models.Request.Challenge)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.ChallengeBase">
+            <summary>
+            Challenge base class.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.ChallengeBase.Type">
+            <summary>
+            Map type.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.ChallengeBase.ChallengeNeededPhrase">
+            <summary>
+            Challenge phrase.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.ChallengeBase.ChallengeRejectedPhrase">
+            <summary>
+            Challenge phrase.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.ChallengeBase.Validate(HomeAutio.Mqtt.GoogleHome.Models.Request.Challenge)">
+            <summary>
+            Validate a Challenge.
+            </summary>
+            <param name="challenge">Challenge to verify.</param>
+            <returns><c>true</c> if challenge passed, otherwise <c>false</c>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.ChallengeType">
+            <summary>
+            Challenge type.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.ChallengeType.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.ChallengeType.Acknowledge">
+            <summary>
+            Acknowledge.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.ChallengeType.Pin">
+            <summary>
+            Pin.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.PinChallenge">
+            <summary>
+            Pin challenge.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.PinChallenge.Type">
+            <inheritdoc />
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.PinChallenge.Pin">
+            <summary>
+            Pin.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.PinChallenge.ChallengeNeededPhrase">
+            <inheritdoc />
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.PinChallenge.ChallengeRejectedPhrase">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.Challenges.PinChallenge.Validate(HomeAutio.Mqtt.GoogleHome.Models.Request.Challenge)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.Device">
+            <summary>
+            Device.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Device.Id">
+            <summary>
+            Device id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Device.Type">
+            <summary>
+            Device type.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Device.Disabled">
+            <summary>
+            Indicates if device is disabled or not.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Device.WillReportState">
+            <summary>
+            Indicates if the device will report state.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Device.RoomHint">
+            <summary>
+            Room hint.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Device.Name">
+            <summary>
+            Device name information.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Device.DeviceInfo">
+            <summary>
+            Device information.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Device.Traits">
+            <summary>
+            Trait configurations.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.Device.CustomData">
+            <summary>
+            Custom data.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.Device.GetGoogleState(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets device state as a Google device state object.
+            </summary>
+            <param name="stateCache">Current state cache.</param>
+            <returns>A Google device state object.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.Device.IsStateFullyInitialized(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Checks if the state cache for the device has been fully initialized.
+            </summary>
+            <param name="stateCache">Current state cache.</param>
+            <returns><c>true</c> if fully initialized, else <c>false</c>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceState">
+            <summary>
+            Device state configuration.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceState.Topic">
+            <summary>
+            MQTT topic.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceState.ValueMap">
+            <summary>
+            Value mappings.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceState.MapValueToGoogle(System.String,HomeAutio.Mqtt.GoogleHome.Models.State.GoogleType)">
+            <summary>
+            Handles mapping some common state values to google acceptable state values.
+            </summary>
+            <param name="stateValue">State value.</param>
+            <param name="googleType">Google type.</param>
+            <returns>Remapped value.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceState.MapValueToMqtt(System.Object)">
+            <summary>
+            Handles mapping some common state values to google acceptable state values.
+            </summary>
+            <param name="stateValue">State value.</param>
+            <returns>Remapped value.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceTrait">
+            <summary>
+            Device trait configuration.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceTrait.Trait">
+            <summary>
+            Trait name.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceTrait.Attributes">
+            <summary>
+            Trait supporting attributes.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceTrait.Commands">
+            <summary>
+            Trait supported commands.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceTrait.State">
+            <summary>
+            Trait state configuration.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceTrait.Challenge">
+            <summary>
+            Challenges for executing trait commands.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceTrait.GetGoogleStateFlattened(System.Collections.Generic.IDictionary{System.String,System.String},HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema)">
+            <summary>
+            Gets trait state as a Google device state object in a flattened state.
+            </summary>
+            <param name="stateCache">Current state cache.</param>
+            <param name="traitSchema">Trait schema.</param>
+            <returns>A Google device state object in a flattened state.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.GoogleType">
+            <summary>
+            Google type enumeration.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.GoogleType.Unknown">
+            <summary>
+            String.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.GoogleType.String">
+            <summary>
+            String.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.GoogleType.Numeric">
+            <summary>
+            Numeric.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.GoogleType.Bool">
+            <summary>
+            Boolean.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.StateCache">
+            <summary>
+            Concurrent dictionary state cache.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.StateCache.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.State.StateCache"/> class.
+            </summary>
+            <param name="dictionary">Initial state dictionary.</param>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.LinearRangeMap">
+            <summary>
+            Linear range based value mapper.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.LinearRangeMap.GoogleMin">
+            <summary>
+            Google min value.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.LinearRangeMap.GoogleMax">
+            <summary>
+            Google max value.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.LinearRangeMap.MqttMin">
+            <summary>
+            MQTT min value.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.LinearRangeMap.MqttMax">
+            <summary>
+            MQTT max value.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.LinearRangeMap.MatchesGoogle(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.LinearRangeMap.ConvertToGoogle(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.LinearRangeMap.MatchesMqtt(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.LinearRangeMap.ConvertToMqtt(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapBase">
+            <summary>
+            Value map base class.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapBase.Type">
+            <summary>
+            Map type.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapBase.MatchesMqtt(System.String)">
+            <summary>
+            Indicates if map should be applied to the passed MQTT value.
+            </summary>
+            <param name="value">MQTT value.</param>
+            <returns><c>true</c> if it should be applied, else <c>false</c>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapBase.MatchesGoogle(System.Object)">
+            <summary>
+            Indicates if map should be applied to the passed Google value.
+            </summary>
+            <param name="value">Google value.</param>
+            <returns><c>true</c> if it should be applied, else <c>false</c>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapBase.ConvertToMqtt(System.Object)">
+            <summary>
+            Converts the passed value to a valid MQTT value.
+            </summary>
+            <param name="value">The Google value to convert.</param>
+            <returns>The transformed MQTT value.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapBase.ConvertToGoogle(System.String)">
+            <summary>
+            Converts the passed value to a valid Google value.
+            </summary>
+            <param name="value">The MQTT value to convert.</param>
+            <returns>The transformed Google value.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapType">
+            <summary>
+            Map type enumeration.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapType.Celsius">
+            <summary>
+            Celsius map.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapType.LinearRange">
+            <summary>
+            Range Calc map.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapType.Range">
+            <summary>
+            Range map.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapType.Regex">
+            <summary>
+            Regex map.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapType.Static">
+            <summary>
+            Static map.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.MapType.Value">
+            <summary>
+            Value map.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RangeMap">
+            <summary>
+            Range based value mapper.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RangeMap.Google">
+            <summary>
+            Google value.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RangeMap.MqttMin">
+            <summary>
+            MQTT min value.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RangeMap.MqttMax">
+            <summary>
+            MQTT max value.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RangeMap.MatchesGoogle(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RangeMap.ConvertToGoogle(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RangeMap.MatchesMqtt(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RangeMap.ConvertToMqtt(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RegexMap">
+            <summary>
+            Regex based mapper.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RegexMap.GoogleSearch">
+            <summary>
+            Regex to use when converting from MQTT to Google.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RegexMap.GoogleReplace">
+            <summary>
+            Replacement string to use when converting from MQTT to Google.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RegexMap.MqttSearch">
+            <summary>
+            Regex to use when converting from Google to MQTT.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RegexMap.MqttReplace">
+            <summary>
+            Replacement string to use when converting from Google to MQTT.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RegexMap.MatchesGoogle(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RegexMap.ConvertToGoogle(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RegexMap.MatchesMqtt(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.RegexMap.ConvertToMqtt(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.StaticMap">
+            <summary>
+            Static based value map.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.StaticMap.Google">
+            <summary>
+            Google value.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.StaticMap.MatchesGoogle(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.StaticMap.ConvertToGoogle(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.StaticMap.MatchesMqtt(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.StaticMap.ConvertToMqtt(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.TemperatureMap">
+            <summary>
+            Celsius to fahrenheit value mapper.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.TemperatureMap.MatchesGoogle(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.TemperatureMap.ConvertToGoogle(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.TemperatureMap.MatchesMqtt(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.TemperatureMap.ConvertToMqtt(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.ValueMap">
+            <summary>
+            Value based value map.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.ValueMap.Google">
+            <summary>
+            Google value.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.ValueMap.Mqtt">
+            <summary>
+            MQTT value.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.ValueMap.MatchesGoogle(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.ValueMap.ConvertToGoogle(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.ValueMap.MatchesMqtt(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Models.State.ValueMaps.ValueMap.ConvertToMqtt(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Models.TraitType">
+            <summary>
+            Trait type enumeration.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Unknown">
+            <summary>
+            Unknown trait type.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.AppSelector">
+            <summary>
+            action.devices.traits.AppSelector.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.ArmDisarm">
+            <summary>
+            action.devices.traits.ArmDisarm.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Brightness">
+            <summary>
+            action.devices.traits.Brightness.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.CameraStream">
+            <summary>
+            action.devices.traits.CameraStream.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Channel">
+            <summary>
+            action.devices.traits.Channel.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.ColorSetting">
+            <summary>
+            action.devices.traits.ColorSetting.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Cook">
+            <summary>
+            action.devices.traits.Cook.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Dispense">
+            <summary>
+            action.devices.traits.Dispense.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Dock">
+            <summary>
+            action.devices.traits.Dock.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.EnergyStorage">
+            <summary>
+            action.devices.traits.EnergyStorage.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.FanSpeed">
+            <summary>
+            action.devices.traits.FanSpeed.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Fill">
+            <summary>
+            action.devices.traits.Fill.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.HumiditySetting">
+            <summary>
+            action.devices.traits.HumiditySetting.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.InputSelector">
+            <summary>
+            action.devices.traits.InputSelector.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.LightEffects">
+            <summary>
+            action.devices.traits.LightEffects.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Locator">
+            <summary>
+            action.devices.traits.Locator.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.LockUnlock">
+            <summary>
+            action.devices.traits.LockUnlock.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.MediaState">
+            <summary>
+            action.devices.traits.MediaState.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Modes">
+            <summary>
+            action.devices.traits.Modes.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.NetworkControl">
+            <summary>
+            action.devices.traits.NetworkControl.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.ObjectDetection">
+            <summary>
+            action.devices.traits.ObjectDetection.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.OnOff">
+            <summary>
+            action.devices.traits.OnOff.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.OpenClose">
+            <summary>
+            action.devices.traits.OpenClose.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Reboot">
+            <summary>
+            action.devices.traits.Reboot.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Rotation">
+            <summary>
+            action.devices.traits.Rotation.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.RunCycle">
+            <summary>
+            action.devices.traits.RunCycle.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Scene">
+            <summary>
+            action.devices.traits.Scene.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.SensorState">
+            <summary>
+            action.devices.traits.SensorState.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.SoftwareUpdate">
+            <summary>
+            action.devices.traits.SoftwareUpdate.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.StartStop">
+            <summary>
+            action.devices.traits.StartStop.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.StatusReport">
+            <summary>
+            action.devices.traits.StatusReport.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.TemperatureControl">
+            <summary>
+            action.devices.traits.TemperatureControl.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.TemperatureSetting">
+            <summary>
+            action.devices.traits.TemperatureSetting.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Timer">
+            <summary>
+            action.devices.traits.Timer.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Toggles">
+            <summary>
+            action.devices.traits.Toggles.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.TransportControl">
+            <summary>
+            action.devices.traits.TransportControl.
+            </summary>
+        </member>
+        <member name="F:HomeAutio.Mqtt.GoogleHome.Models.TraitType.Volume">
+            <summary>
+            action.devices.traits.Volume.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Program">
+            <summary>
+            Main program entry point.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Program.Main(System.String[])">
+            <summary>
+            Main program entry point.
+            </summary>
+            <param name="args">Arguments.</param>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.RequestResponseLoggingMiddleware">
+            <summary>
+            Request response logging middlware.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.RequestResponseLoggingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.RequestResponseLoggingMiddleware"/> class.
+            </summary>
+            <param name="next">Next request delegate.</param>
+            <param name="loggerFactory">Logger factory.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.RequestResponseLoggingMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Middleware invocation.
+            </summary>
+            <param name="context">OWIN context.</param>
+            <returns>An awaitable <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.RequestResponseLoggingMiddleware.ReadStreamInChunks(System.IO.Stream)">
+            <summary>
+            Read stream in chunks.
+            </summary>
+            <param name="stream">Stream to read.</param>
+            <returns>Read string.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.RequestResponseLoggingMiddleware.LogRequest(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Log request.
+            </summary>
+            <param name="context">Context.</param>
+            <returns>An awaitable <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.RequestResponseLoggingMiddleware.LogResponse(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Log response.
+            </summary>
+            <param name="context">Context.</param>
+            <returns>An awaitable <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Services.GoogleHomeGraphService">
+            <summary>
+            Google HomeGraph API service.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.GoogleHomeGraphService.#ctor(Easy.MessageHub.IMessageHub,HomeAutio.Mqtt.GoogleHome.GoogleHomeGraphClient,HomeAutio.Mqtt.GoogleHome.Models.State.StateCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.Services.GoogleHomeGraphService"/> class.
+            </summary>
+            <param name="messageHub">Message hub.</param>
+            <param name="googleHomeGraphClient">Google Home Graph API client.</param>
+            <param name="stateCache">State cache,</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.GoogleHomeGraphService.StartAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.GoogleHomeGraphService.StopAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.GoogleHomeGraphService.HandleGoogleRequestSync(HomeAutio.Mqtt.GoogleHome.Models.Events.RequestSyncEvent)">
+            <summary>
+            REQUEST_SYNC event handler.
+            </summary>
+            <param name="requestSyncEvent">Request sync event trigger.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.GoogleHomeGraphService.HandleGoogleReportState(HomeAutio.Mqtt.GoogleHome.Models.Events.ReportStateEvent)">
+            <summary>
+            ReportStateAndNotification event handler.
+            </summary>
+            <param name="reportStateEvent">Report state event to handle.</param>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Services.MqttService">
+            <summary>
+            MQTT Service.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.MqttService.#ctor(Microsoft.Extensions.Logging.ILogger{HomeAutio.Mqtt.GoogleHome.Services.MqttService},Easy.MessageHub.IMessageHub,HomeAutio.Mqtt.Core.BrokerSettings,HomeAutio.Mqtt.GoogleHome.IGoogleDeviceRepository,HomeAutio.Mqtt.GoogleHome.Models.State.StateCache,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.Services.MqttService"/> class.
+            </summary>
+            <param name="logger">Logging instance.</param>
+            <param name="messageHub">Message hub.</param>
+            <param name="brokerSettings">MQTT broker settings.</param>
+            <param name="deviceRepository">Device repository.</param>
+            <param name="stateCache">State cache.</param>
+            <param name="topicRoot">Topic root.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.MqttService.StartServiceAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.MqttService.StopServiceAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.MqttService.MqttMsgPublishReceived(MQTTnet.Client.MqttApplicationMessageReceivedEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.MqttService.HandleConfigSubscriptionChange(HomeAutio.Mqtt.GoogleHome.Models.Events.ConfigSubscriptionChangeEvent)">
+            <summary>
+            Handler for device config change events.
+            </summary>
+            <param name="changeEvent">The change event to handle.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.MqttService.HandleGoogleHomeCommand(HomeAutio.Mqtt.GoogleHome.Models.Events.DeviceCommandExecutionEvent)">
+            <summary>
+            Handler for Google Home commands.
+            </summary>
+            <param name="deviceCommandExecutionEvent">The device command to handle.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.MqttService.HandleGoogleHomeSyncIntent(HomeAutio.Mqtt.GoogleHome.Models.Events.SyncIntentReceivedEvent)">
+            <summary>
+            Handler for Google Home SYNC intent.
+            </summary>
+            <param name="syncIntentReceivedEvent">The SYNC intent to handle.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.MqttService.HandleGoogleHomeQueryIntent(HomeAutio.Mqtt.GoogleHome.Models.Events.QueryIntentReceivedEvent)">
+            <summary>
+            Handler for Google Home QUERY intent.
+            </summary>
+            <param name="queryIntentReceivedEvent">The QUERY intent to handle.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.MqttService.Dispose(System.Boolean)">
+            <summary>
+            Dispose implementation.
+            </summary>
+            <param name="disposing">Indicates if disposing.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.MqttService.WhiteSpaceRegex">
+            <remarks>
+            Pattern explanation:<br/>
+            <code>
+            ○ Match a whitespace character.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Services.TokenCleanupService">
+            <summary>
+            Token cleanup service.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.TokenCleanupService.#ctor(HomeAutio.Mqtt.GoogleHome.Identity.TokenCleanup)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.Services.TokenCleanupService"/> class.
+            </summary>
+            <param name="tokenCleanup">Token cleanup.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.TokenCleanupService.StartAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Services.TokenCleanupService.StopAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Startup">
+            <summary>
+            Startup class.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HomeAutio.Mqtt.GoogleHome.Startup"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.Startup.Configuration">
+            <summary>
+            Configuration.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">Service collection.</param>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">The app builder.</param>
+            <param name="env">The hosting environment.</param>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.TraitSchemaProvider">
+            <summary>
+            Trait schema provider.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.TraitSchemaProvider.GetTraitSchemas">
+            <summary>
+            Get trait schemas for validation.
+            </summary>
+            <returns>A dictionary of trait schemas.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.TraitSchemaProvider.InitTraitSchemas(System.Threading.CancellationToken)">
+            <summary>
+            Initializes trait schemas.
+            </summary>
+            <param name="cancellationToken">Cancellation token.</param>
+            <returns>A dictionary of trait schemas.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Validation.CustomDataValidator">
+            <summary>
+            CustomData validator.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Validation.CustomDataValidator.Validate(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Validates a CustomData dictionary.
+            </summary>
+            <param name="customData">The CustomData to validate.</param>
+            <returns>Validation errors.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Validation.DeviceInfoValidator">
+            <summary>
+            <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.DeviceInfo"/> validator.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Validation.DeviceInfoValidator.Validate(HomeAutio.Mqtt.GoogleHome.Models.DeviceInfo)">
+            <summary>
+            Validates a <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.DeviceInfo"/>.
+            </summary>
+            <param name="deviceInfo">The <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.DeviceInfo"/> to validate.</param>
+            <returns>Validation errors.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Validation.DeviceTraitValidator">
+            <summary>
+            <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceTrait"/> validator.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Validation.DeviceTraitValidator.Validate(HomeAutio.Mqtt.GoogleHome.Models.State.DeviceTrait)">
+            <summary>
+            Validates a <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceTrait"/>.
+            </summary>
+            <param name="deviceTrait">The <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.State.DeviceTrait"/> to validate.</param>
+            <returns>Validation errors.</returns>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Validation.DeviceTraitValidator.GetFakeGoogleState(System.Collections.Generic.IDictionary{System.String,HomeAutio.Mqtt.GoogleHome.Models.State.DeviceState},HomeAutio.Mqtt.GoogleHome.Models.Schema.TraitSchema)">
+            <summary>
+            Gets device state as a Google device state object in a flattened state with dummy data for initial validation.
+            </summary>
+            <param name="stateConfigs">Current state cache.</param>
+            <param name="traitSchema">Trait schema.</param>
+            <returns>A Google device state object in a flattened state.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Validation.DeviceValidator">
+            <summary>
+            Device validator.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Validation.DeviceValidator.Validate(HomeAutio.Mqtt.GoogleHome.Models.State.Device)">
+            <summary>
+            Validates a <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.State.Device"/>.
+            </summary>
+            <param name="device">Device to validate.</param>
+            <returns>Validation errors.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.Validation.NameInfoValidator">
+            <summary>
+            <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.NameInfo"/> validator.
+            </summary>
+        </member>
+        <member name="M:HomeAutio.Mqtt.GoogleHome.Validation.NameInfoValidator.Validate(HomeAutio.Mqtt.GoogleHome.Models.NameInfo)">
+            <summary>
+            Validates a <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.NameInfo"/>.
+            </summary>
+            <param name="nameInfo">The <see cref="T:HomeAutio.Mqtt.GoogleHome.Models.NameInfo"/> to validate.</param>
+            <returns>Validation errors.</returns>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel">
+            <summary>
+            Device View Model.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.Id">
+            <summary>
+            Device id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.Type">
+            <summary>
+            Device type.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.Disabled">
+            <summary>
+            Indicates if device is disabled or not.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.WillReportState">
+            <summary>
+            Indicates if the device will report state.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.RoomHint">
+            <summary>
+            Room hint.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.DefaultNames">
+            <summary>
+            Defaul names.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.Nicknames">
+            <summary>
+            Nicknames.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.Manufacturer">
+            <summary>
+            Manufacturer.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.Model">
+            <summary>
+            Model.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.HwVersion">
+            <summary>
+            Hardware version.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.SwVersion">
+            <summary>
+            Software version.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.DeviceViewModel.Traits">
+            <summary>
+            Trait configurations.
+            </summary>
+        </member>
+        <member name="T:HomeAutio.Mqtt.GoogleHome.ViewModels.TraitViewModel">
+            <summary>
+            Trait View Model.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.TraitViewModel.Trait">
+            <summary>
+            Device id.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.TraitViewModel.Attributes">
+            <summary>
+            Attributes.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.TraitViewModel.Commands">
+            <summary>
+            Commands.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.TraitViewModel.State">
+            <summary>
+            State.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.TraitViewModel.ChallengeType">
+            <summary>
+            Challenge type.
+            </summary>
+        </member>
+        <member name="P:HomeAutio.Mqtt.GoogleHome.ViewModels.TraitViewModel.ChallengePin">
+            <summary>
+            Challenge pin, if applicable.
+            </summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.ArrayRegex_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the ArrayRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.ArrayRegex_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ArrayRegex_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.ArrayRegex_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ArrayRegex_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.ArrayRegex_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ArrayRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ArrayRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.ArrayRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.WhiteSpaceRegex_1">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the WhiteSpaceRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.WhiteSpaceRegex_1.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.WhiteSpaceRegex_1.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.WhiteSpaceRegex_1.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.WhiteSpaceRegex_1.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.WhiteSpaceRegex_1.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.WhiteSpaceRegex_1.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.WhiteSpaceRegex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+    </members>
+</doc>

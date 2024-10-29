@@ -1,0 +1,25 @@
+2024-09-27 09:07:07.525 +07:00 [WRN] Timeout while waiting for response packet (MqttPingRespPacket).
+2024-09-27 09:07:08.149 +07:00 [WRN] Communication error while sending/receiving keep alive packets.
+2024-09-27 09:07:08.169 +07:00 [WRN] MQTT Connection failed, retrying...
+2024-09-27 09:07:08.184 +07:00 [INF] Disconnected.
+2024-09-27 09:07:08.185 +07:00 [INF] MQTT Connection closed unexpectedly, reconnecting...
+2024-09-27 09:07:13.204 +07:00 [ERR] Error while connecting with server.
+2024-09-27 09:07:13.205 +07:00 [INF] Disconnected.
+2024-09-27 09:07:13.206 +07:00 [INF] MQTT Connection closed unexpectedly, reconnecting...
+2024-09-27 09:07:13.206 +07:00 [WRN] MQTT Connection failed, retrying...
+2024-09-27 09:07:18.255 +07:00 [INF] Connected.
+2024-09-27 09:07:18.256 +07:00 [INF] MQTT Connection established
+2024-09-27 09:07:18.257 +07:00 [INF] Publishing subscriptions at reconnect
+2024-09-27 09:07:35.840 +07:00 [INF] Removing expired grants
+2024-09-27 09:08:35.852 +07:00 [INF] Removing expired grants
+2024-09-27 09:09:35.862 +07:00 [INF] Removing expired grants
+2024-09-27 09:10:35.877 +07:00 [INF] Removing expired grants
+2024-09-27 09:11:35.883 +07:00 [INF] Removing expired grants
+2024-09-27 09:12:35.886 +07:00 [INF] Removing expired grants
+2024-09-27 09:13:35.894 +07:00 [INF] Removing expired grants
+2024-09-27 09:14:35.901 +07:00 [INF] Removing expired grants
+2024-09-27 09:15:35.903 +07:00 [INF] Removing expired grants
+2024-09-27 09:16:35.908 +07:00 [INF] Removing expired grants
+2024-09-27 09:17:35.924 +07:00 [INF] Removing expired grants
+2024-09-27 09:18:39.597 +07:00 [INF] Removing expired grants
+2024-09-27 09:19:39.611 +07:00 [INF] Removing expired grants

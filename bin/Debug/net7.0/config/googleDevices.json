@@ -1,0 +1,104 @@
+{
+  "google/home/switch/1434TYRE": {
+    "id": "google/home/switch/1434TYRE",
+    "type": "action.devices.types.SWITCH",
+    "disabled": false,
+    "willReportState": true,
+    "roomHint": "Some Room",
+    "name": {
+      "defaultNames": [],
+      "name": "switch",
+      "nicknames": []
+    },
+    "deviceInfo": {
+      "manufacturer": "Some Company",
+      "model": "Some Model",
+      "hwVersion": "1.0",
+      "swVersion": "1.0"
+    },
+    "traits": [
+      {
+        "trait": "action.devices.traits.OnOff",
+        "attributes": {
+          "commandOnlyOnOff": false,
+          "queryOnlyOnOff": false
+        },
+        "commands": {
+          "action.devices.commands.OnOff": {
+            "on": "google/home/commands/switch/1434TYRE/onoff/set"
+          }
+        },
+        "state": {
+          "on": {
+            "topic": "google/home/state/switch/1434TYRE/onoff",
+            "valueMap": [
+              {
+                "google": "true",
+                "mqtt": "on",
+                "type": "value"
+              },
+              {
+                "google": "false",
+                "mqtt": "off",
+                "type": "value"
+              }
+            ]
+          }
+        },
+        "challenge": null
+      }
+    ],
+    "customData": null
+  },
+  "google/home/outlet/AGF65T": {
+    "id": "google/home/outlet/AGF65T",
+    "type": "action.devices.types.OUTLET",
+    "disabled": false,
+    "willReportState": true,
+    "roomHint": "Some Room",
+    "name": {
+      "defaultNames": [],
+      "name": "outlet",
+      "nicknames": []
+    },
+    "deviceInfo": {
+      "manufacturer": "Some Company",
+      "model": "Some Model",
+      "hwVersion": "1.0",
+      "swVersion": "1.0"
+    },
+    "traits": [
+      {
+        "trait": "action.devices.traits.OnOff",
+        "attributes": {
+          "commandOnlyOnOff": false,
+          "queryOnlyOnOff": false
+        },
+        "commands": {
+          "action.devices.commands.OnOff": {
+            "on": "google/home/commands/outlet/AGF65T/onoff/set"
+          }
+        },
+        "state": {
+          "on": {
+            "topic": "google/home/state/outlet/AGF65T/onoff",
+            "valueMap": [
+              {
+                "google": "true",
+                "mqtt": "on",
+                "type": "value"
+              },
+              {
+                "google": "false",
+                "mqtt": "off",
+                "type": "value"
+              }
+            ]
+          }
+        },
+        "challenge": null
+      }
+    ],
+    "customData": null
+  }
+}

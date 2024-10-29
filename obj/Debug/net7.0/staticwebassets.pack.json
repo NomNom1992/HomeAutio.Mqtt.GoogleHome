@@ -1,0 +1,385 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\css\\site.min.css",
+      "PackagePath": "staticwebassets\\css\\site.min.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\css\\site.scss",
+      "PackagePath": "staticwebassets\\css\\site.scss"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\icon.png",
+      "PackagePath": "staticwebassets\\icon.png"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\js\\signin-redirect.js",
+      "PackagePath": "staticwebassets\\js\\signin-redirect.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\js\\signout-redirect.js",
+      "PackagePath": "staticwebassets\\js\\signout-redirect.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\bootstrap\\bootstrap-5.2.3.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap-5.2.3.bundle.min.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\bootstrap\\themes\\darkly\\_variables.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\themes\\darkly\\_variables.scss"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\bootstrap\\themes\\darkly\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\themes\\darkly\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\bootstrap\\themes\\darkly\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\themes\\darkly\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\bootstrap\\themes\\flatly\\_variables.scss",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\themes\\flatly\\_variables.scss"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\bootstrap\\themes\\flatly\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\themes\\flatly\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\bootstrap\\themes\\flatly\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\themes\\flatly\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\comment\\comment.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\comment\\comment.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\comment\\continuecomment.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\comment\\continuecomment.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\dialog\\dialog.css",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\dialog\\dialog.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\dialog\\dialog.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\dialog\\dialog.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\display\\autorefresh.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\display\\autorefresh.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\display\\fullscreen.css",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\display\\fullscreen.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\display\\fullscreen.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\display\\fullscreen.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\display\\panel.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\display\\panel.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\display\\placeholder.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\display\\placeholder.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\display\\rulers.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\display\\rulers.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\edit\\closebrackets.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\edit\\closebrackets.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\edit\\closetag.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\edit\\closetag.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\edit\\continuelist.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\edit\\continuelist.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\edit\\matchbrackets.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\edit\\matchbrackets.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\edit\\matchtags.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\edit\\matchtags.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\edit\\trailingspace.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\edit\\trailingspace.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\fold\\brace-fold.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\fold\\brace-fold.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\fold\\comment-fold.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\fold\\comment-fold.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\fold\\foldcode.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\fold\\foldcode.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\fold\\foldgutter.css",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\fold\\foldgutter.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\fold\\foldgutter.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\fold\\foldgutter.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\fold\\indent-fold.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\fold\\indent-fold.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\fold\\markdown-fold.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\fold\\markdown-fold.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\fold\\xml-fold.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\fold\\xml-fold.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\hint\\anyword-hint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\hint\\anyword-hint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\hint\\css-hint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\hint\\css-hint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\hint\\html-hint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\hint\\html-hint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\hint\\javascript-hint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\hint\\javascript-hint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\hint\\show-hint.css",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\hint\\show-hint.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\hint\\show-hint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\hint\\show-hint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\hint\\sql-hint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\hint\\sql-hint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\hint\\xml-hint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\hint\\xml-hint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\lint\\coffeescript-lint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\lint\\coffeescript-lint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\lint\\css-lint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\lint\\css-lint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\lint\\html-lint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\lint\\html-lint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\lint\\javascript-lint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\lint\\javascript-lint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\lint\\json-lint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\lint\\json-lint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\lint\\lint.css",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\lint\\lint.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\lint\\lint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\lint\\lint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\lint\\yaml-lint.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\lint\\yaml-lint.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\merge\\merge.css",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\merge\\merge.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\merge\\merge.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\merge\\merge.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\mode\\loadmode.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\mode\\loadmode.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\mode\\multiplex.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\mode\\multiplex.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\mode\\multiplex_test.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\mode\\multiplex_test.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\mode\\overlay.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\mode\\overlay.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\mode\\simple.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\mode\\simple.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\runmode\\colorize.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\runmode\\colorize.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\runmode\\runmode-standalone.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\runmode\\runmode-standalone.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\runmode\\runmode.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\runmode\\runmode.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\runmode\\runmode.node.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\runmode\\runmode.node.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\scroll\\annotatescrollbar.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\scroll\\annotatescrollbar.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\scroll\\scrollpastend.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\scroll\\scrollpastend.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\scroll\\simplescrollbars.css",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\scroll\\simplescrollbars.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\scroll\\simplescrollbars.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\scroll\\simplescrollbars.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\search\\jump-to-line.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\search\\jump-to-line.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\search\\match-highlighter.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\search\\match-highlighter.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\search\\matchesonscrollbar.css",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\search\\matchesonscrollbar.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\search\\matchesonscrollbar.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\search\\matchesonscrollbar.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\search\\search.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\search\\search.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\search\\searchcursor.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\search\\searchcursor.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\selection\\active-line.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\selection\\active-line.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\selection\\mark-selection.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\selection\\mark-selection.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\selection\\selection-pointer.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\selection\\selection-pointer.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\tern\\tern.css",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\tern\\tern.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\tern\\tern.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\tern\\tern.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\tern\\worker.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\tern\\worker.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\addon\\wrap\\hardwrap.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\addon\\wrap\\hardwrap.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\lib\\codemirror.css",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\lib\\codemirror.css"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\lib\\codemirror.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\lib\\codemirror.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\mode\\javascript\\index.html",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\mode\\javascript\\index.html"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\mode\\javascript\\javascript.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\mode\\javascript\\javascript.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\mode\\javascript\\json-ld.html",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\mode\\javascript\\json-ld.html"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\mode\\javascript\\test.js",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\mode\\javascript\\test.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\codemirror\\mode\\javascript\\typescript.html",
+      "PackagePath": "staticwebassets\\lib\\codemirror\\mode\\javascript\\typescript.html"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\jquery\\jquery-3.6.3.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery-3.6.3.min.js"
+    },
+    {
+      "Id": "C:\\homeautio\\HomeAutio.Mqtt.GoogleHome-3.0.0.15\\src\\HomeAutio.Mqtt.GoogleHome\\wwwroot\\lib\\styleswitcher\\styleswitcher.js",
+      "PackagePath": "staticwebassets\\lib\\styleswitcher\\styleswitcher.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.HomeAutio.Mqtt.GoogleHome.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.HomeAutio.Mqtt.GoogleHome.props",
+      "PackagePath": "build\\HomeAutio.Mqtt.GoogleHome.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.HomeAutio.Mqtt.GoogleHome.props",
+      "PackagePath": "buildMultiTargeting\\HomeAutio.Mqtt.GoogleHome.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.HomeAutio.Mqtt.GoogleHome.props",
+      "PackagePath": "buildTransitive\\HomeAutio.Mqtt.GoogleHome.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

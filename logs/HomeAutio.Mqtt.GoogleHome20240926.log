@@ -1,0 +1,797 @@
+2024-09-26 11:17:59.224 +07:00 [INF] Loaded with configuration from: appsettings.json, C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\appsettings.Development.json
+2024-09-26 11:18:00.216 +07:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2024-09-26 11:18:00.276 +07:00 [INF] Restored tokens from config/tokens.json
+2024-09-26 11:18:00.302 +07:00 [INF] Using the default authentication scheme Cookies for IdentityServer
+2024-09-26 11:18:00.750 +07:00 [INF] Loaded device configuration from config/googleDevices.json
+2024-09-26 11:18:00.836 +07:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-26 11:18:00.841 +07:00 [INF] Service start initiated
+2024-09-26 11:18:00.845 +07:00 [INF] MQTT subscribing to the following topics: google/home/commands/+/set, google/home/state/switch/1434TYRE/onoff, google/home/state/outlet/AGF65T/onoff
+2024-09-26 11:18:00.848 +07:00 [INF] Started
+2024-09-26 11:18:00.849 +07:00 [INF] Service started successfully
+2024-09-26 11:18:00.996 +07:00 [INF] Connected.
+2024-09-26 11:18:01.001 +07:00 [INF] Now listening on: https://localhost:51293
+2024-09-26 11:18:01.001 +07:00 [INF] MQTT Connection established
+2024-09-26 11:18:01.001 +07:00 [INF] Now listening on: http://localhost:51294
+2024-09-26 11:18:01.003 +07:00 [INF] Publishing subscriptions at reconnect
+2024-09-26 11:18:01.033 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 11:18:01.034 +07:00 [INF] Hosting environment: Development
+2024-09-26 11:18:01.035 +07:00 [INF] Content root path: C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome
+2024-09-26 11:18:02.059 +07:00 [INF] Request starting HTTP/2 GET https://localhost:51293/ - -
+2024-09-26 11:18:02.201 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 11:18:02.208 +07:00 [INF] AuthenticationScheme: Cookies was challenged.
+2024-09-26 11:18:02.212 +07:00 [INF] Request finished HTTP/2 GET https://localhost:51293/ - - - 302 0 - 154.3026ms
+2024-09-26 11:18:02.219 +07:00 [INF] Request starting HTTP/2 GET https://localhost:51293/Account/Login?ReturnUrl=%2F - -
+2024-09-26 11:18:02.226 +07:00 [INF] Executing endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:18:02.245 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller IdentityServerHost.Quickstart.UI.AccountController (IdentityServerHost.Quickstart.UI).
+2024-09-26 11:18:02.283 +07:00 [INF] Executing ViewResult, running view Login.
+2024-09-26 11:18:02.379 +07:00 [INF] Executed ViewResult - view Login executed in 99.1539ms.
+2024-09-26 11:18:02.385 +07:00 [INF] Executed action IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI) in 137.8203ms
+2024-09-26 11:18:02.387 +07:00 [INF] Executed endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:18:02.390 +07:00 [INF] Request finished HTTP/2 GET https://localhost:51293/Account/Login?ReturnUrl=%2F - - - 200 - text/html;+charset=utf-8 171.6610ms
+2024-09-26 11:18:02.394 +07:00 [INF] Request starting HTTP/2 GET https://localhost:51293/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 11:18:02.395 +07:00 [INF] Request starting HTTP/2 GET https://localhost:51293/_vs/browserLink - -
+2024-09-26 11:18:02.397 +07:00 [INF] Request finished HTTP/2 GET https://localhost:51293/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 3.3198ms
+2024-09-26 11:18:02.443 +07:00 [INF] Request finished HTTP/2 GET https://localhost:51293/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.5940ms
+2024-09-26 11:18:20.406 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/ - -
+2024-09-26 11:18:20.411 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 11:18:20.412 +07:00 [INF] AuthenticationScheme: Cookies was challenged.
+2024-09-26 11:18:20.413 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/ - - - 302 0 - 7.3833ms
+2024-09-26 11:18:20.537 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F - -
+2024-09-26 11:18:20.541 +07:00 [INF] Executing endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:18:20.542 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller IdentityServerHost.Quickstart.UI.AccountController (IdentityServerHost.Quickstart.UI).
+2024-09-26 11:18:20.546 +07:00 [INF] Executing ViewResult, running view Login.
+2024-09-26 11:18:20.559 +07:00 [INF] Executed ViewResult - view Login executed in 13.0738ms.
+2024-09-26 11:18:20.560 +07:00 [INF] Executed action IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI) in 17.012ms
+2024-09-26 11:18:20.561 +07:00 [INF] Executed endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:18:20.561 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F - - - 200 - text/html;+charset=utf-8 24.4740ms
+2024-09-26 11:18:20.684 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/darkly/bootstrap.min.css - -
+2024-09-26 11:18:20.706 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/themes/darkly/bootstrap.min.css'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\bootstrap\themes\darkly\bootstrap.min.css'
+2024-09-26 11:18:20.707 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/darkly/bootstrap.min.css - - - 200 195601 text/css 22.7354ms
+2024-09-26 11:18:20.743 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/css/site.css - -
+2024-09-26 11:18:20.744 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - -
+2024-09-26 11:18:20.744 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap-5.2.3.bundle.min.js - -
+2024-09-26 11:18:20.744 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 11:18:20.744 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/icon.png - -
+2024-09-26 11:18:20.744 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/styleswitcher/styleswitcher.js - -
+2024-09-26 11:18:20.745 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/flatly/bootstrap.min.css - -
+2024-09-26 11:18:20.746 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/jquery/jquery-3.6.3.min.js - -
+2024-09-26 11:18:20.748 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 3.4096ms
+2024-09-26 11:18:20.749 +07:00 [INF] Sending file. Request path: '/icon.png'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\icon.png'
+2024-09-26 11:18:20.753 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/icon.png - - - 200 536 image/png 8.4959ms
+2024-09-26 11:18:20.755 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.5505ms
+2024-09-26 11:18:20.755 +07:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\css\site.css'
+2024-09-26 11:18:20.756 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/css/site.css - - - 200 1462 text/css 13.0316ms
+2024-09-26 11:18:20.776 +07:00 [INF] Sending file. Request path: '/lib/styleswitcher/styleswitcher.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\styleswitcher\styleswitcher.js'
+2024-09-26 11:18:20.777 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/styleswitcher/styleswitcher.js - - - 200 2350 text/javascript 32.9773ms
+2024-09-26 11:18:20.778 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/bootstrap-5.2.3.bundle.min.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\bootstrap\bootstrap-5.2.3.bundle.min.js'
+2024-09-26 11:18:20.780 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap-5.2.3.bundle.min.js - - - 200 80420 text/javascript 35.8040ms
+2024-09-26 11:18:20.803 +07:00 [INF] Sending file. Request path: '/lib/jquery/jquery-3.6.3.min.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\jquery\jquery-3.6.3.min.js'
+2024-09-26 11:18:20.805 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/jquery/jquery-3.6.3.min.js - - - 200 89947 text/javascript 58.2004ms
+2024-09-26 11:18:20.830 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/themes/flatly/bootstrap.min.css'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\bootstrap\themes\flatly\bootstrap.min.css'
+2024-09-26 11:18:20.832 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/flatly/bootstrap.min.css - - - 200 196382 text/css 87.4944ms
+2024-09-26 11:18:21.380 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/favicon.ico - -
+2024-09-26 11:18:21.389 +07:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\favicon.ico'
+2024-09-26 11:18:21.390 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/favicon.ico - - - 200 15406 image/x-icon 10.1717ms
+2024-09-26 11:19:00.859 +07:00 [INF] Removing expired grants
+2024-09-26 11:20:00.875 +07:00 [INF] Removing expired grants
+2024-09-26 11:20:09.723 +07:00 [INF] Loaded with configuration from: appsettings.json, C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\appsettings.Development.json
+2024-09-26 11:20:09.993 +07:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2024-09-26 11:20:10.037 +07:00 [INF] Restored tokens from config/tokens.json
+2024-09-26 11:20:10.050 +07:00 [INF] Using the default authentication scheme Cookies for IdentityServer
+2024-09-26 11:20:10.282 +07:00 [INF] Loaded device configuration from config/googleDevices.json
+2024-09-26 11:20:10.298 +07:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-26 11:20:10.303 +07:00 [INF] Service start initiated
+2024-09-26 11:20:10.305 +07:00 [INF] MQTT subscribing to the following topics: google/home/commands/+/set, google/home/state/outlet/AGF65T/onoff, google/home/state/switch/1434TYRE/onoff
+2024-09-26 11:20:10.308 +07:00 [INF] Started
+2024-09-26 11:20:10.309 +07:00 [INF] Service started successfully
+2024-09-26 11:20:10.362 +07:00 [INF] Now listening on: https://localhost:51293
+2024-09-26 11:20:10.364 +07:00 [INF] Now listening on: http://localhost:51294
+2024-09-26 11:20:10.392 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-26 11:20:10.394 +07:00 [INF] Hosting environment: Development
+2024-09-26 11:20:10.395 +07:00 [INF] Content root path: C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome
+2024-09-26 11:20:10.404 +07:00 [INF] Connected.
+2024-09-26 11:20:10.408 +07:00 [INF] MQTT Connection established
+2024-09-26 11:20:10.410 +07:00 [INF] Publishing subscriptions at reconnect
+2024-09-26 11:20:10.732 +07:00 [INF] Request starting HTTP/2 GET https://localhost:51293/ - -
+2024-09-26 11:20:10.799 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 11:20:10.803 +07:00 [INF] AuthenticationScheme: Cookies was challenged.
+2024-09-26 11:20:10.806 +07:00 [INF] Request finished HTTP/2 GET https://localhost:51293/ - - - 302 0 - 74.9046ms
+2024-09-26 11:20:10.811 +07:00 [INF] Request starting HTTP/2 GET https://localhost:51293/Account/Login?ReturnUrl=%2F - -
+2024-09-26 11:20:10.819 +07:00 [INF] Executing endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:20:10.833 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller IdentityServerHost.Quickstart.UI.AccountController (IdentityServerHost.Quickstart.UI).
+2024-09-26 11:20:10.857 +07:00 [INF] Executing ViewResult, running view Login.
+2024-09-26 11:20:10.940 +07:00 [INF] Executed ViewResult - view Login executed in 84.516ms.
+2024-09-26 11:20:10.946 +07:00 [INF] Executed action IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI) in 111.5595ms
+2024-09-26 11:20:10.948 +07:00 [INF] Executed endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:20:10.952 +07:00 [INF] Request finished HTTP/2 GET https://localhost:51293/Account/Login?ReturnUrl=%2F - - - 200 - text/html;+charset=utf-8 140.5512ms
+2024-09-26 11:20:10.964 +07:00 [INF] Request starting HTTP/2 GET https://localhost:51293/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 11:20:10.965 +07:00 [INF] Request starting HTTP/2 GET https://localhost:51293/_vs/browserLink - -
+2024-09-26 11:20:10.967 +07:00 [INF] Request finished HTTP/2 GET https://localhost:51293/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 3.0753ms
+2024-09-26 11:20:10.984 +07:00 [INF] Request finished HTTP/2 GET https://localhost:51293/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.3142ms
+2024-09-26 11:21:10.324 +07:00 [INF] Removing expired grants
+2024-09-26 11:21:59.683 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/ - -
+2024-09-26 11:21:59.687 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 11:21:59.688 +07:00 [INF] AuthenticationScheme: Cookies was challenged.
+2024-09-26 11:21:59.689 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/ - - - 302 0 - 5.7139ms
+2024-09-26 11:21:59.818 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F - -
+2024-09-26 11:21:59.822 +07:00 [INF] Executing endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:21:59.823 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller IdentityServerHost.Quickstart.UI.AccountController (IdentityServerHost.Quickstart.UI).
+2024-09-26 11:21:59.827 +07:00 [INF] Executing ViewResult, running view Login.
+2024-09-26 11:21:59.831 +07:00 [INF] Executed ViewResult - view Login executed in 4.6458ms.
+2024-09-26 11:21:59.832 +07:00 [INF] Executed action IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI) in 8.1561ms
+2024-09-26 11:21:59.833 +07:00 [INF] Executed endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:21:59.834 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F - - - 200 - text/html;+charset=utf-8 15.4635ms
+2024-09-26 11:22:10.336 +07:00 [INF] Removing expired grants
+2024-09-26 11:23:10.344 +07:00 [INF] Removing expired grants
+2024-09-26 11:23:34.154 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo - -
+2024-09-26 11:23:34.166 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 11:23:34.168 +07:00 [INF] AuthenticationScheme: Cookies was challenged.
+2024-09-26 11:23:34.168 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo - - - 302 0 - 14.2563ms
+2024-09-26 11:23:34.292 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F%3Futm_source%3Dzalo%26utm_medium%3Dzalo%26utm_campaign%3Dzalo - -
+2024-09-26 11:23:34.294 +07:00 [INF] Executing endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:23:34.295 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller IdentityServerHost.Quickstart.UI.AccountController (IdentityServerHost.Quickstart.UI).
+2024-09-26 11:23:34.299 +07:00 [INF] Executing ViewResult, running view Login.
+2024-09-26 11:23:34.300 +07:00 [INF] Executed ViewResult - view Login executed in 1.9168ms.
+2024-09-26 11:23:34.301 +07:00 [INF] Executed action IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI) in 5.033ms
+2024-09-26 11:23:34.302 +07:00 [INF] Executed endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:23:34.303 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F%3Futm_source%3Dzalo%26utm_medium%3Dzalo%26utm_campaign%3Dzalo - - - 200 - text/html;+charset=utf-8 11.1005ms
+2024-09-26 11:23:34.445 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/flatly/bootstrap.min.css - -
+2024-09-26 11:23:34.452 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/darkly/bootstrap.min.css - -
+2024-09-26 11:23:34.452 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/css/site.css - -
+2024-09-26 11:23:34.452 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/icon.png - -
+2024-09-26 11:23:34.456 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/themes/darkly/bootstrap.min.css'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\bootstrap\themes\darkly\bootstrap.min.css'
+2024-09-26 11:23:34.456 +07:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\css\site.css'
+2024-09-26 11:23:34.456 +07:00 [INF] Sending file. Request path: '/icon.png'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\icon.png'
+2024-09-26 11:23:34.456 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/themes/flatly/bootstrap.min.css'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\bootstrap\themes\flatly\bootstrap.min.css'
+2024-09-26 11:23:34.457 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/darkly/bootstrap.min.css - - - 200 195601 text/css 4.9255ms
+2024-09-26 11:23:34.457 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/css/site.css - - - 200 1462 text/css 5.4857ms
+2024-09-26 11:23:34.458 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/icon.png - - - 200 536 image/png 5.8587ms
+2024-09-26 11:23:34.459 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/flatly/bootstrap.min.css - - - 200 196382 text/css 14.0386ms
+2024-09-26 11:23:34.504 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/jquery/jquery-3.6.3.min.js - -
+2024-09-26 11:23:34.506 +07:00 [INF] Sending file. Request path: '/lib/jquery/jquery-3.6.3.min.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\jquery\jquery-3.6.3.min.js'
+2024-09-26 11:23:34.507 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/jquery/jquery-3.6.3.min.js - - - 200 89947 text/javascript 2.6859ms
+2024-09-26 11:23:34.509 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/styleswitcher/styleswitcher.js - -
+2024-09-26 11:23:34.509 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 11:23:34.509 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - -
+2024-09-26 11:23:34.509 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap-5.2.3.bundle.min.js - -
+2024-09-26 11:23:34.510 +07:00 [INF] Sending file. Request path: '/lib/styleswitcher/styleswitcher.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\styleswitcher\styleswitcher.js'
+2024-09-26 11:23:34.511 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 1.2534ms
+2024-09-26 11:23:34.512 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/bootstrap-5.2.3.bundle.min.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\bootstrap\bootstrap-5.2.3.bundle.min.js'
+2024-09-26 11:23:34.513 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/styleswitcher/styleswitcher.js - - - 200 2350 text/javascript 3.5235ms
+2024-09-26 11:23:34.514 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap-5.2.3.bundle.min.js - - - 200 80420 text/javascript 5.0534ms
+2024-09-26 11:23:34.517 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 7.5359ms
+2024-09-26 11:23:35.194 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/favicon.ico - -
+2024-09-26 11:23:35.196 +07:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\favicon.ico'
+2024-09-26 11:23:35.198 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/favicon.ico - - - 200 15406 image/x-icon 4.0010ms
+2024-09-26 11:23:35.215 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - -
+2024-09-26 11:23:35.215 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap-5.2.3.bundle.min.js - -
+2024-09-26 11:23:35.215 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 11:23:35.215 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/jquery/jquery-3.6.3.min.js - -
+2024-09-26 11:23:35.217 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/bootstrap-5.2.3.bundle.min.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\bootstrap\bootstrap-5.2.3.bundle.min.js'
+2024-09-26 11:23:35.218 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 2.6343ms
+2024-09-26 11:23:35.218 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 3.0300ms
+2024-09-26 11:23:35.219 +07:00 [INF] Sending file. Request path: '/lib/jquery/jquery-3.6.3.min.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\jquery\jquery-3.6.3.min.js'
+2024-09-26 11:23:35.219 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap-5.2.3.bundle.min.js - - - 200 80420 text/javascript 4.3423ms
+2024-09-26 11:23:35.221 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/jquery/jquery-3.6.3.min.js - - - 200 89947 text/javascript 5.7075ms
+2024-09-26 11:23:35.253 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/styleswitcher/styleswitcher.js - -
+2024-09-26 11:23:35.255 +07:00 [INF] Sending file. Request path: '/lib/styleswitcher/styleswitcher.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\styleswitcher\styleswitcher.js'
+2024-09-26 11:23:35.256 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/styleswitcher/styleswitcher.js - - - 200 2350 text/javascript 3.0777ms
+2024-09-26 11:24:10.359 +07:00 [INF] Removing expired grants
+2024-09-26 11:24:21.653 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap.bundle.min.js.map - -
+2024-09-26 11:24:21.670 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap.bundle.min.js.map - - - 404 0 - 16.7202ms
+2024-09-26 11:25:10.371 +07:00 [INF] Removing expired grants
+2024-09-26 11:25:12.072 +07:00 [INF] Request starting HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F%3Futm_source%3Dzalo%26utm_medium%3Dzalo%26utm_campaign%3Dzalo application/x-www-form-urlencoded 335
+2024-09-26 11:25:12.075 +07:00 [INF] Executing endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:25:12.088 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(IdentityServerHost.Quickstart.UI.LoginInputModel, System.String) on controller IdentityServerHost.Quickstart.UI.AccountController (IdentityServerHost.Quickstart.UI).
+2024-09-26 11:25:12.113 +07:00 [INF] AuthenticationScheme: Cookies signed in.
+2024-09-26 11:25:12.114 +07:00 [INF] Executing RedirectResult, redirecting to /?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo.
+2024-09-26 11:25:12.115 +07:00 [INF] Executed action IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI) in 24.3216ms
+2024-09-26 11:25:12.115 +07:00 [INF] Executed endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 11:25:12.116 +07:00 [INF] Request finished HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F%3Futm_source%3Dzalo%26utm_medium%3Dzalo%26utm_campaign%3Dzalo application/x-www-form-urlencoded 335 - 302 0 - 43.9795ms
+2024-09-26 11:25:12.241 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo - -
+2024-09-26 11:25:12.245 +07:00 [INF] Executing endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Index (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 11:25:12.254 +07:00 [INF] Route matched with {action = "Index", controller = "GoogleDevice"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController (HomeAutio.Mqtt.GoogleHome).
+2024-09-26 11:25:12.257 +07:00 [INF] Executing ViewResult, running view Index.
+2024-09-26 11:25:12.271 +07:00 [INF] Executed ViewResult - view Index executed in 14.15ms.
+2024-09-26 11:25:12.272 +07:00 [INF] Executed action HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Index (HomeAutio.Mqtt.GoogleHome) in 16.2964ms
+2024-09-26 11:25:12.273 +07:00 [INF] Executed endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Index (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 11:25:12.273 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo - - - 200 - text/html;+charset=utf-8 32.0663ms
+2024-09-26 11:25:12.473 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 11:25:12.474 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 1.7163ms
+2024-09-26 11:25:12.478 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - -
+2024-09-26 11:25:12.480 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1.8870ms
+2024-09-26 11:25:12.567 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap.bundle.min.js.map - -
+2024-09-26 11:25:12.570 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap.bundle.min.js.map - - - 404 0 - 2.8245ms
+2024-09-26 11:26:10.384 +07:00 [INF] Removing expired grants
+2024-09-26 11:27:10.394 +07:00 [INF] Removing expired grants
+2024-09-26 11:28:10.395 +07:00 [INF] Removing expired grants
+2024-09-26 11:29:10.408 +07:00 [INF] Removing expired grants
+2024-09-26 11:30:10.411 +07:00 [INF] Removing expired grants
+2024-09-26 11:31:10.426 +07:00 [INF] Removing expired grants
+2024-09-26 11:32:10.430 +07:00 [INF] Removing expired grants
+2024-09-26 11:32:45.058 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/GoogleDevice/Create - -
+2024-09-26 11:32:45.061 +07:00 [INF] Executing endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Create (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 11:32:45.062 +07:00 [INF] Route matched with {action = "Create", controller = "GoogleDevice"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController (HomeAutio.Mqtt.GoogleHome).
+2024-09-26 11:32:45.076 +07:00 [INF] Executing ViewResult, running view Create.
+2024-09-26 11:32:45.258 +07:00 [INF] Executed ViewResult - view Create executed in 182.2055ms.
+2024-09-26 11:32:45.260 +07:00 [INF] Executed action HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Create (HomeAutio.Mqtt.GoogleHome) in 196.7127ms
+2024-09-26 11:32:45.261 +07:00 [INF] Executed endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Create (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 11:32:45.262 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/GoogleDevice/Create - - - 200 - text/html;+charset=utf-8 203.8377ms
+2024-09-26 11:32:45.493 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 11:32:45.495 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 1.8520ms
+2024-09-26 11:32:45.552 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - -
+2024-09-26 11:32:45.555 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 3.2946ms
+2024-09-26 11:33:10.434 +07:00 [INF] Removing expired grants
+2024-09-26 11:34:10.448 +07:00 [INF] Removing expired grants
+2024-09-26 11:35:10.457 +07:00 [INF] Removing expired grants
+2024-09-26 11:36:10.476 +07:00 [INF] Removing expired grants
+2024-09-26 11:37:10.492 +07:00 [INF] Removing expired grants
+2024-09-26 11:38:10.499 +07:00 [INF] Removing expired grants
+2024-09-26 11:39:10.513 +07:00 [INF] Removing expired grants
+2024-09-26 11:40:10.533 +07:00 [INF] Removing expired grants
+2024-09-26 11:41:10.540 +07:00 [INF] Removing expired grants
+2024-09-26 11:42:10.555 +07:00 [INF] Removing expired grants
+2024-09-26 11:43:10.560 +07:00 [INF] Removing expired grants
+2024-09-26 11:44:10.584 +07:00 [INF] Removing expired grants
+2024-09-26 11:45:10.599 +07:00 [INF] Removing expired grants
+2024-09-26 11:46:10.614 +07:00 [INF] Removing expired grants
+2024-09-26 11:47:10.630 +07:00 [INF] Removing expired grants
+2024-09-26 11:48:10.633 +07:00 [INF] Removing expired grants
+2024-09-26 11:49:10.639 +07:00 [INF] Removing expired grants
+2024-09-26 11:50:10.643 +07:00 [INF] Removing expired grants
+2024-09-26 11:51:10.657 +07:00 [INF] Removing expired grants
+2024-09-26 11:55:28.133 +07:00 [WRN] Timeout while waiting for response packet (MqttPingRespPacket).
+2024-09-26 11:55:28.143 +07:00 [WRN] Communication error while sending/receiving keep alive packets.
+2024-09-26 11:55:28.145 +07:00 [INF] Disconnected.
+2024-09-26 11:55:28.147 +07:00 [INF] MQTT Connection closed unexpectedly, reconnecting...
+2024-09-26 11:55:28.779 +07:00 [ERR] Error while connecting with server.
+2024-09-26 11:55:28.780 +07:00 [INF] Disconnected.
+2024-09-26 11:55:28.780 +07:00 [INF] MQTT Connection closed unexpectedly, reconnecting...
+2024-09-26 11:55:28.780 +07:00 [WRN] MQTT Connection failed, retrying...
+2024-09-26 11:55:33.904 +07:00 [INF] Connected.
+2024-09-26 11:55:33.905 +07:00 [INF] MQTT Connection established
+2024-09-26 11:55:33.905 +07:00 [INF] Publishing subscriptions at reconnect
+2024-09-26 11:55:53.373 +07:00 [INF] Removing expired grants
+2024-09-26 11:56:53.380 +07:00 [INF] Removing expired grants
+2024-09-26 11:57:53.381 +07:00 [INF] Removing expired grants
+2024-09-26 11:58:53.396 +07:00 [INF] Removing expired grants
+2024-09-26 11:59:53.416 +07:00 [INF] Removing expired grants
+2024-09-26 12:00:53.441 +07:00 [INF] Removing expired grants
+2024-09-26 12:01:53.445 +07:00 [INF] Removing expired grants
+2024-09-26 12:02:53.452 +07:00 [INF] Removing expired grants
+2024-09-26 12:03:53.470 +07:00 [INF] Removing expired grants
+2024-09-26 12:04:53.477 +07:00 [INF] Removing expired grants
+2024-09-26 12:05:53.493 +07:00 [INF] Removing expired grants
+2024-09-26 12:06:53.492 +07:00 [INF] Removing expired grants
+2024-09-26 12:07:53.494 +07:00 [INF] Removing expired grants
+2024-09-26 12:08:53.501 +07:00 [INF] Removing expired grants
+2024-09-26 12:09:53.508 +07:00 [INF] Removing expired grants
+2024-09-26 12:10:53.509 +07:00 [INF] Removing expired grants
+2024-09-26 12:11:53.535 +07:00 [INF] Removing expired grants
+2024-09-26 12:12:53.550 +07:00 [INF] Removing expired grants
+2024-09-26 12:13:53.566 +07:00 [INF] Removing expired grants
+2024-09-26 12:14:53.568 +07:00 [INF] Removing expired grants
+2024-09-26 12:15:53.580 +07:00 [INF] Removing expired grants
+2024-09-26 12:16:53.584 +07:00 [INF] Removing expired grants
+2024-09-26 12:17:53.586 +07:00 [INF] Removing expired grants
+2024-09-26 12:18:53.598 +07:00 [INF] Removing expired grants
+2024-09-26 12:19:53.598 +07:00 [INF] Removing expired grants
+2024-09-26 12:20:53.599 +07:00 [INF] Removing expired grants
+2024-09-26 12:21:53.599 +07:00 [INF] Removing expired grants
+2024-09-26 12:22:53.600 +07:00 [INF] Removing expired grants
+2024-09-26 12:23:53.613 +07:00 [INF] Removing expired grants
+2024-09-26 12:24:53.613 +07:00 [INF] Removing expired grants
+2024-09-26 12:25:53.615 +07:00 [INF] Removing expired grants
+2024-09-26 12:26:53.628 +07:00 [INF] Removing expired grants
+2024-09-26 13:09:39.031 +07:00 [WRN] Timeout while waiting for response packet (MqttPingRespPacket).
+2024-09-26 13:09:39.032 +07:00 [WRN] Communication error while sending/receiving keep alive packets.
+2024-09-26 13:09:39.033 +07:00 [INF] Disconnected.
+2024-09-26 13:09:39.034 +07:00 [INF] MQTT Connection closed unexpectedly, reconnecting...
+2024-09-26 13:09:39.359 +07:00 [ERR] Error while connecting with server.
+2024-09-26 13:09:39.360 +07:00 [INF] Disconnected.
+2024-09-26 13:09:39.360 +07:00 [INF] MQTT Connection closed unexpectedly, reconnecting...
+2024-09-26 13:09:39.361 +07:00 [WRN] MQTT Connection failed, retrying...
+2024-09-26 13:09:44.482 +07:00 [INF] Connected.
+2024-09-26 13:09:44.483 +07:00 [INF] MQTT Connection established
+2024-09-26 13:09:44.484 +07:00 [INF] Publishing subscriptions at reconnect
+2024-09-26 13:10:04.130 +07:00 [INF] Removing expired grants
+2024-09-26 13:11:04.132 +07:00 [INF] Removing expired grants
+2024-09-26 13:12:04.135 +07:00 [INF] Removing expired grants
+2024-09-26 13:46:03.023 +07:00 [WRN] Timeout while waiting for response packet (MqttPingRespPacket).
+2024-09-26 13:46:03.027 +07:00 [WRN] Communication error while sending/receiving keep alive packets.
+2024-09-26 13:46:03.028 +07:00 [INF] Disconnected.
+2024-09-26 13:46:03.029 +07:00 [INF] MQTT Connection closed unexpectedly, reconnecting...
+2024-09-26 13:46:03.185 +07:00 [ERR] Error while connecting with server.
+2024-09-26 13:46:03.187 +07:00 [INF] Disconnected.
+2024-09-26 13:46:03.187 +07:00 [INF] MQTT Connection closed unexpectedly, reconnecting...
+2024-09-26 13:46:03.187 +07:00 [WRN] MQTT Connection failed, retrying...
+2024-09-26 13:46:08.226 +07:00 [INF] Connected.
+2024-09-26 13:46:08.227 +07:00 [INF] MQTT Connection established
+2024-09-26 13:46:08.228 +07:00 [INF] Publishing subscriptions at reconnect
+2024-09-26 13:46:50.953 +07:00 [INF] Removing expired grants
+2024-09-26 13:47:50.966 +07:00 [INF] Removing expired grants
+2024-09-26 13:47:56.675 +07:00 [INF] Request starting HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/connect/token application/x-www-form-urlencoded 201
+2024-09-26 13:47:56.691 +07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2024-09-26 13:47:56.729 +07:00 [INF] Token request validation success, {"ClientId":"00000000-0000-0000-0000-000000000000","ClientName":"Google Actions Client","GrantType":"refresh_token","Scopes":null,"AuthorizationCode":"********","RefreshToken":"****A714","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"refresh_token","refresh_token":"***REDACTED***","client_id":"00000000-0000-0000-0000-000000000000","client_secret":"***REDACTED***"},"$type":"TokenRequestValidationLog"}
+2024-09-26 13:47:56.786 +07:00 [INF] Writing tokens to config/tokens.json
+2024-09-26 13:47:56.790 +07:00 [INF] Wrote tokens to config/tokens.json
+2024-09-26 13:47:56.792 +07:00 [INF] Writing tokens to config/tokens.json
+2024-09-26 13:47:56.799 +07:00 [INF] Wrote tokens to config/tokens.json
+2024-09-26 13:47:56.811 +07:00 [INF] Request finished HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/connect/token application/x-www-form-urlencoded 201 - 200 - application/json;+charset=UTF-8 136.0021ms
+2024-09-26 13:47:57.454 +07:00 [INF] Request starting HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 177
+2024-09-26 13:47:57.785 +07:00 [INF] Request starting HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 176
+2024-09-26 13:47:57.840 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/.well-known/openid-configuration - -
+2024-09-26 13:47:57.842 +07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-09-26 13:47:57.854 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 13.9795ms
+2024-09-26 13:47:57.995 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/.well-known/openid-configuration/jwks - -
+2024-09-26 13:47:57.997 +07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-09-26 13:47:58.003 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 7.8715ms
+2024-09-26 13:47:58.084 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuer(String issuer, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-09-26 13:47:58.084 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuer(String issuer, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-09-26 13:47:58.089 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+2024-09-26 13:47:58.090 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+2024-09-26 13:47:58.092 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 13:47:58.092 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 13:47:58.094 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-26 13:47:58.094 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-26 13:47:58.095 +07:00 [INF] Request finished HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 177 - 401 0 - 640.3833ms
+2024-09-26 13:47:58.095 +07:00 [INF] Request finished HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 176 - 401 0 - 310.0146ms
+2024-09-26 13:47:59.216 +07:00 [INF] Request starting HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 177
+2024-09-26 13:47:59.218 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuer(String issuer, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-09-26 13:47:59.220 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+2024-09-26 13:47:59.221 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 13:47:59.221 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-26 13:47:59.221 +07:00 [INF] Request finished HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 177 - 401 0 - 5.8141ms
+2024-09-26 13:47:59.279 +07:00 [INF] Request starting HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 177
+2024-09-26 13:47:59.281 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuer(String issuer, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-09-26 13:47:59.282 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+2024-09-26 13:47:59.283 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 13:47:59.283 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-26 13:47:59.284 +07:00 [INF] Request finished HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 177 - 401 0 - 5.0716ms
+2024-09-26 13:48:50.977 +07:00 [INF] Removing expired grants
+2024-09-26 13:48:50.979 +07:00 [INF] Writing tokens to config/tokens.json
+2024-09-26 13:48:50.980 +07:00 [INF] Wrote tokens to config/tokens.json
+2024-09-26 13:49:50.991 +07:00 [INF] Removing expired grants
+2024-09-26 13:50:51.008 +07:00 [INF] Removing expired grants
+2024-09-26 13:51:51.015 +07:00 [INF] Removing expired grants
+2024-09-26 13:52:51.030 +07:00 [INF] Removing expired grants
+2024-09-26 13:53:51.039 +07:00 [INF] Removing expired grants
+2024-09-26 13:53:54.342 +07:00 [INF] Request starting HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 175
+2024-09-26 13:53:54.345 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuer(String issuer, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-09-26 13:53:54.347 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+2024-09-26 13:53:54.348 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 13:53:54.348 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-26 13:53:54.349 +07:00 [INF] Request finished HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 175 - 401 0 - 6.7590ms
+2024-09-26 13:53:55.201 +07:00 [INF] Request starting HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 176
+2024-09-26 13:53:55.203 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuer(String issuer, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-09-26 13:53:55.205 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+2024-09-26 13:53:55.206 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 13:53:55.206 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-26 13:53:55.207 +07:00 [INF] Request finished HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 176 - 401 0 - 5.6743ms
+2024-09-26 13:53:55.457 +07:00 [INF] Request starting HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 177
+2024-09-26 13:53:55.459 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuer(String issuer, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-09-26 13:53:55.462 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+2024-09-26 13:53:55.463 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 13:53:55.463 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-26 13:53:55.463 +07:00 [INF] Request finished HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 177 - 401 0 - 6.6482ms
+2024-09-26 13:53:56.393 +07:00 [INF] Request starting HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 177
+2024-09-26 13:53:56.395 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidIssuerException: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateIssuer(String issuer, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateIssuer(String issuer, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-09-26 13:53:56.398 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10205: Issuer validation failed. Issuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Did not match: validationParameters.ValidIssuer: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' or validationParameters.ValidIssuers: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. For more details, see https://aka.ms/IdentityModel/issuer-validation. 
+2024-09-26 13:53:56.398 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 13:53:56.399 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-26 13:53:56.399 +07:00 [INF] Request finished HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/smarthome application/json;charset=UTF-8 177 - 401 0 - 6.3859ms
+2024-09-26 13:54:51.056 +07:00 [INF] Removing expired grants
+2024-09-26 13:55:51.064 +07:00 [INF] Removing expired grants
+2024-09-26 13:56:51.069 +07:00 [INF] Removing expired grants
+2024-09-26 13:57:51.083 +07:00 [INF] Removing expired grants
+2024-09-26 13:58:51.088 +07:00 [INF] Removing expired grants
+2024-09-26 13:59:51.095 +07:00 [INF] Removing expired grants
+2024-09-26 14:00:51.099 +07:00 [INF] Removing expired grants
+2024-09-26 14:01:51.101 +07:00 [INF] Removing expired grants
+2024-09-26 14:02:51.111 +07:00 [INF] Removing expired grants
+2024-09-26 14:03:51.123 +07:00 [INF] Removing expired grants
+2024-09-26 14:04:51.127 +07:00 [INF] Removing expired grants
+2024-09-26 14:05:51.141 +07:00 [INF] Removing expired grants
+2024-09-26 14:06:51.155 +07:00 [INF] Removing expired grants
+2024-09-26 14:07:51.167 +07:00 [INF] Removing expired grants
+2024-09-26 14:08:51.174 +07:00 [INF] Removing expired grants
+2024-09-26 14:09:51.190 +07:00 [INF] Removing expired grants
+2024-09-26 14:10:51.201 +07:00 [INF] Removing expired grants
+2024-09-26 14:11:51.202 +07:00 [INF] Removing expired grants
+2024-09-26 14:12:51.217 +07:00 [INF] Removing expired grants
+2024-09-26 14:13:51.232 +07:00 [INF] Removing expired grants
+2024-09-26 14:14:51.236 +07:00 [INF] Removing expired grants
+2024-09-26 14:15:51.240 +07:00 [INF] Removing expired grants
+2024-09-26 14:16:51.248 +07:00 [INF] Removing expired grants
+2024-09-26 14:17:51.254 +07:00 [INF] Removing expired grants
+2024-09-26 14:18:51.261 +07:00 [INF] Removing expired grants
+2024-09-26 14:19:51.264 +07:00 [INF] Removing expired grants
+2024-09-26 14:20:51.266 +07:00 [INF] Removing expired grants
+2024-09-26 14:21:51.291 +07:00 [INF] Removing expired grants
+2024-09-26 14:22:51.294 +07:00 [INF] Removing expired grants
+2024-09-26 14:23:51.303 +07:00 [INF] Removing expired grants
+2024-09-26 14:24:51.312 +07:00 [INF] Removing expired grants
+2024-09-26 14:25:51.323 +07:00 [INF] Removing expired grants
+2024-09-26 14:26:51.332 +07:00 [INF] Removing expired grants
+2024-09-26 14:27:51.342 +07:00 [INF] Removing expired grants
+2024-09-26 14:28:51.352 +07:00 [INF] Removing expired grants
+2024-09-26 14:29:51.363 +07:00 [INF] Removing expired grants
+2024-09-26 14:30:51.388 +07:00 [INF] Removing expired grants
+2024-09-26 14:31:51.397 +07:00 [INF] Removing expired grants
+2024-09-26 14:32:51.410 +07:00 [INF] Removing expired grants
+2024-09-26 14:33:51.416 +07:00 [INF] Removing expired grants
+2024-09-26 14:34:51.423 +07:00 [INF] Removing expired grants
+2024-09-26 14:35:51.425 +07:00 [INF] Removing expired grants
+2024-09-26 14:36:51.432 +07:00 [INF] Removing expired grants
+2024-09-26 14:37:51.442 +07:00 [INF] Removing expired grants
+2024-09-26 14:38:51.450 +07:00 [INF] Removing expired grants
+2024-09-26 14:39:51.454 +07:00 [INF] Removing expired grants
+2024-09-26 14:40:51.454 +07:00 [INF] Removing expired grants
+2024-09-26 14:41:51.464 +07:00 [INF] Removing expired grants
+2024-09-26 14:42:51.475 +07:00 [INF] Removing expired grants
+2024-09-26 14:43:51.477 +07:00 [INF] Removing expired grants
+2024-09-26 14:44:51.489 +07:00 [INF] Removing expired grants
+2024-09-26 14:45:51.496 +07:00 [INF] Removing expired grants
+2024-09-26 14:46:51.498 +07:00 [INF] Removing expired grants
+2024-09-26 14:47:51.509 +07:00 [INF] Removing expired grants
+2024-09-26 14:48:51.517 +07:00 [INF] Removing expired grants
+2024-09-26 14:48:58.700 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo - -
+2024-09-26 14:48:58.704 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-26 14:48:58.705 +07:00 [INF] AuthenticationScheme: Cookies was challenged.
+2024-09-26 14:48:58.705 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo - - - 302 0 - 5.2561ms
+2024-09-26 14:48:58.843 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F%3Futm_source%3Dzalo%26utm_medium%3Dzalo%26utm_campaign%3Dzalo - -
+2024-09-26 14:48:58.845 +07:00 [INF] Executing endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 14:48:58.847 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller IdentityServerHost.Quickstart.UI.AccountController (IdentityServerHost.Quickstart.UI).
+2024-09-26 14:48:58.849 +07:00 [INF] Executing ViewResult, running view Login.
+2024-09-26 14:48:58.851 +07:00 [INF] Executed ViewResult - view Login executed in 2.6522ms.
+2024-09-26 14:48:58.852 +07:00 [INF] Executed action IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI) in 4.4204ms
+2024-09-26 14:48:58.853 +07:00 [INF] Executed endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 14:48:58.854 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F%3Futm_source%3Dzalo%26utm_medium%3Dzalo%26utm_campaign%3Dzalo - - - 200 - text/html;+charset=utf-8 10.9029ms
+2024-09-26 14:48:58.999 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/flatly/bootstrap.min.css - -
+2024-09-26 14:48:59.001 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/themes/flatly/bootstrap.min.css'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\bootstrap\themes\flatly\bootstrap.min.css'
+2024-09-26 14:48:59.002 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/flatly/bootstrap.min.css - - - 200 196382 text/css 3.7578ms
+2024-09-26 14:48:59.065 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - -
+2024-09-26 14:48:59.066 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/darkly/bootstrap.min.css - -
+2024-09-26 14:48:59.066 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/jquery/jquery-3.6.3.min.js - -
+2024-09-26 14:48:59.066 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap-5.2.3.bundle.min.js - -
+2024-09-26 14:48:59.066 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/css/site.css - -
+2024-09-26 14:48:59.067 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/icon.png - -
+2024-09-26 14:48:59.067 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 14:48:59.067 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/styleswitcher/styleswitcher.js - -
+2024-09-26 14:48:59.068 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 3.2138ms
+2024-09-26 14:48:59.068 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/themes/darkly/bootstrap.min.css'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\bootstrap\themes\darkly\bootstrap.min.css'
+2024-09-26 14:48:59.068 +07:00 [INF] Sending file. Request path: '/lib/jquery/jquery-3.6.3.min.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\jquery\jquery-3.6.3.min.js'
+2024-09-26 14:48:59.069 +07:00 [INF] Sending file. Request path: '/lib/bootstrap/bootstrap-5.2.3.bundle.min.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\bootstrap\bootstrap-5.2.3.bundle.min.js'
+2024-09-26 14:48:59.069 +07:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\css\site.css'
+2024-09-26 14:48:59.070 +07:00 [INF] Sending file. Request path: '/icon.png'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\icon.png'
+2024-09-26 14:48:59.070 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 3.1761ms
+2024-09-26 14:48:59.071 +07:00 [INF] Sending file. Request path: '/lib/styleswitcher/styleswitcher.js'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\lib\styleswitcher\styleswitcher.js'
+2024-09-26 14:48:59.072 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/themes/darkly/bootstrap.min.css - - - 200 195601 text/css 5.4476ms
+2024-09-26 14:48:59.072 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/jquery/jquery-3.6.3.min.js - - - 200 89947 text/javascript 6.0481ms
+2024-09-26 14:48:59.073 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap-5.2.3.bundle.min.js - - - 200 80420 text/javascript 6.6416ms
+2024-09-26 14:48:59.073 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/css/site.css - - - 200 1462 text/css 7.0071ms
+2024-09-26 14:48:59.074 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/icon.png - - - 200 536 image/png 7.2995ms
+2024-09-26 14:48:59.075 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/styleswitcher/styleswitcher.js - - - 200 2350 text/javascript 8.0651ms
+2024-09-26 14:48:59.837 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/favicon.ico - -
+2024-09-26 14:48:59.839 +07:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\homeautio\HomeAutio.Mqtt.GoogleHome-3.0.0.15\src\HomeAutio.Mqtt.GoogleHome\wwwroot\favicon.ico'
+2024-09-26 14:48:59.840 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/favicon.ico - - - 200 15406 image/x-icon 2.8374ms
+2024-09-26 14:49:48.985 +07:00 [INF] Request starting HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F%3Futm_source%3Dzalo%26utm_medium%3Dzalo%26utm_campaign%3Dzalo application/x-www-form-urlencoded 335
+2024-09-26 14:49:48.988 +07:00 [INF] Executing endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 14:49:48.988 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(IdentityServerHost.Quickstart.UI.LoginInputModel, System.String) on controller IdentityServerHost.Quickstart.UI.AccountController (IdentityServerHost.Quickstart.UI).
+2024-09-26 14:49:48.990 +07:00 [INF] AuthenticationScheme: Cookies signed in.
+2024-09-26 14:49:48.991 +07:00 [INF] Executing RedirectResult, redirecting to /?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo.
+2024-09-26 14:49:48.991 +07:00 [INF] Executed action IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI) in 2.323ms
+2024-09-26 14:49:48.992 +07:00 [INF] Executed endpoint 'IdentityServerHost.Quickstart.UI.AccountController.Login (IdentityServerHost.Quickstart.UI)'
+2024-09-26 14:49:48.993 +07:00 [INF] Request finished HTTP/1.1 POST http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/Account/Login?ReturnUrl=%2F%3Futm_source%3Dzalo%26utm_medium%3Dzalo%26utm_campaign%3Dzalo application/x-www-form-urlencoded 335 - 302 0 - 8.1776ms
+2024-09-26 14:49:49.127 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo - -
+2024-09-26 14:49:49.129 +07:00 [INF] Executing endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Index (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 14:49:49.130 +07:00 [INF] Route matched with {action = "Index", controller = "GoogleDevice"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController (HomeAutio.Mqtt.GoogleHome).
+2024-09-26 14:49:49.132 +07:00 [INF] Executing ViewResult, running view Index.
+2024-09-26 14:49:49.133 +07:00 [INF] Executed ViewResult - view Index executed in 1.7307ms.
+2024-09-26 14:49:49.134 +07:00 [INF] Executed action HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Index (HomeAutio.Mqtt.GoogleHome) in 2.7145ms
+2024-09-26 14:49:49.134 +07:00 [INF] Executed endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Index (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 14:49:49.135 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo - - - 200 - text/html;+charset=utf-8 8.3041ms
+2024-09-26 14:49:49.279 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - -
+2024-09-26 14:49:49.280 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 14:49:49.282 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 2.1200ms
+2024-09-26 14:49:49.283 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 3.6721ms
+2024-09-26 14:49:51.519 +07:00 [INF] Removing expired grants
+2024-09-26 14:49:52.496 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap.bundle.min.js.map - -
+2024-09-26 14:49:52.498 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap.bundle.min.js.map - - - 404 0 - 2.0788ms
+2024-09-26 14:50:15.991 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/GoogleDevice/Edit?deviceId=google%2Fhome%2Fswitch%2F1434TYRE - -
+2024-09-26 14:50:15.995 +07:00 [INF] Executing endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Edit (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 14:50:15.998 +07:00 [INF] Route matched with {action = "Edit", controller = "GoogleDevice"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Edit(System.String) on controller HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController (HomeAutio.Mqtt.GoogleHome).
+2024-09-26 14:50:16.002 +07:00 [INF] Executing ViewResult, running view Edit.
+2024-09-26 14:50:16.036 +07:00 [INF] Executed ViewResult - view Edit executed in 33.794ms.
+2024-09-26 14:50:16.038 +07:00 [INF] Executed action HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Edit (HomeAutio.Mqtt.GoogleHome) in 38.2246ms
+2024-09-26 14:50:16.039 +07:00 [INF] Executed endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Edit (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 14:50:16.040 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/GoogleDevice/Edit?deviceId=google%2Fhome%2Fswitch%2F1434TYRE - - - 200 - text/html;+charset=utf-8 48.7229ms
+2024-09-26 14:50:16.268 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 14:50:16.268 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - -
+2024-09-26 14:50:16.271 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 2.4921ms
+2024-09-26 14:50:16.273 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 5.2933ms
+2024-09-26 14:50:16.342 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap.bundle.min.js.map - -
+2024-09-26 14:50:16.344 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap.bundle.min.js.map - - - 404 0 - 2.0381ms
+2024-09-26 14:50:23.663 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/ - -
+2024-09-26 14:50:23.666 +07:00 [INF] Executing endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Index (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 14:50:23.667 +07:00 [INF] Route matched with {action = "Index", controller = "GoogleDevice"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController (HomeAutio.Mqtt.GoogleHome).
+2024-09-26 14:50:23.669 +07:00 [INF] Executing ViewResult, running view Index.
+2024-09-26 14:50:23.670 +07:00 [INF] Executed ViewResult - view Index executed in 1.2239ms.
+2024-09-26 14:50:23.671 +07:00 [INF] Executed action HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Index (HomeAutio.Mqtt.GoogleHome) in 1.9458ms
+2024-09-26 14:50:23.672 +07:00 [INF] Executed endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Index (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 14:50:23.673 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/ - - - 200 - text/html;+charset=utf-8 9.5204ms
+2024-09-26 14:50:23.853 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - -
+2024-09-26 14:50:23.853 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 14:50:23.856 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 3.5708ms
+2024-09-26 14:50:23.857 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 3.7471ms
+2024-09-26 14:50:25.656 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/GoogleDevice/Create - -
+2024-09-26 14:50:25.658 +07:00 [INF] Executing endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Create (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 14:50:25.661 +07:00 [INF] Route matched with {action = "Create", controller = "GoogleDevice"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController (HomeAutio.Mqtt.GoogleHome).
+2024-09-26 14:50:25.671 +07:00 [INF] Executing ViewResult, running view Create.
+2024-09-26 14:50:25.673 +07:00 [INF] Executed ViewResult - view Create executed in 2.5649ms.
+2024-09-26 14:50:25.674 +07:00 [INF] Executed action HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Create (HomeAutio.Mqtt.GoogleHome) in 3.2916ms
+2024-09-26 14:50:25.675 +07:00 [INF] Executed endpoint 'HomeAutio.Mqtt.GoogleHome.Controllers.GoogleDeviceController.Create (HomeAutio.Mqtt.GoogleHome)'
+2024-09-26 14:50:25.677 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/GoogleDevice/Create - - - 200 - text/html;+charset=utf-8 20.9804ms
+2024-09-26 14:50:25.911 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - -
+2024-09-26 14:50:25.911 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - -
+2024-09-26 14:50:25.914 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_framework/aspnetcore-browser-refresh.js - - - 200 12382 application/javascript;+charset=utf-8 2.2971ms
+2024-09-26 14:50:25.916 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 4.9485ms
+2024-09-26 14:50:51.530 +07:00 [INF] Removing expired grants
+2024-09-26 14:51:51.531 +07:00 [INF] Removing expired grants
+2024-09-26 14:52:51.542 +07:00 [INF] Removing expired grants
+2024-09-26 14:53:51.548 +07:00 [INF] Removing expired grants
+2024-09-26 14:54:51.558 +07:00 [INF] Removing expired grants
+2024-09-26 14:55:51.560 +07:00 [INF] Removing expired grants
+2024-09-26 14:56:51.565 +07:00 [INF] Removing expired grants
+2024-09-26 14:57:51.575 +07:00 [INF] Removing expired grants
+2024-09-26 14:58:02.926 +07:00 [INF] Request starting HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap.bundle.min.js.map - -
+2024-09-26 14:58:02.929 +07:00 [INF] Request finished HTTP/1.1 GET http://1452-2402-800-610d-8530-4457-a3a8-5927-5926.ngrok-free.app/lib/bootstrap/bootstrap.bundle.min.js.map - - - 404 0 - 2.3751ms
+2024-09-26 14:58:51.582 +07:00 [INF] Removing expired grants
+2024-09-26 14:59:51.586 +07:00 [INF] Removing expired grants
+2024-09-26 15:00:51.600 +07:00 [INF] Removing expired grants
+2024-09-26 15:01:51.600 +07:00 [INF] Removing expired grants
+2024-09-26 15:02:51.614 +07:00 [INF] Removing expired grants
+2024-09-26 15:03:51.615 +07:00 [INF] Removing expired grants
+2024-09-26 15:04:51.627 +07:00 [INF] Removing expired grants
+2024-09-26 15:05:51.637 +07:00 [INF] Removing expired grants
+2024-09-26 15:06:51.647 +07:00 [INF] Removing expired grants
+2024-09-26 15:07:51.662 +07:00 [INF] Removing expired grants
+2024-09-26 15:08:51.669 +07:00 [INF] Removing expired grants
+2024-09-26 15:09:51.676 +07:00 [INF] Removing expired grants
+2024-09-26 15:10:51.687 +07:00 [INF] Removing expired grants
+2024-09-26 15:11:51.701 +07:00 [INF] Removing expired grants
+2024-09-26 15:12:51.704 +07:00 [INF] Removing expired grants
+2024-09-26 15:13:51.711 +07:00 [INF] Removing expired grants
+2024-09-26 15:14:51.742 +07:00 [INF] Removing expired grants
+2024-09-26 15:15:52.036 +07:00 [INF] Removing expired grants
+2024-09-26 15:16:52.046 +07:00 [INF] Removing expired grants
+2024-09-26 15:17:52.051 +07:00 [INF] Removing expired grants
+2024-09-26 15:18:52.064 +07:00 [INF] Removing expired grants
+2024-09-26 15:19:52.077 +07:00 [INF] Removing expired grants
+2024-09-26 15:20:52.076 +07:00 [INF] Removing expired grants
+2024-09-26 15:21:52.079 +07:00 [INF] Removing expired grants
+2024-09-26 15:22:52.089 +07:00 [INF] Removing expired grants
+2024-09-26 15:23:52.099 +07:00 [INF] Removing expired grants
+2024-09-26 15:24:52.109 +07:00 [INF] Removing expired grants
+2024-09-26 15:25:52.120 +07:00 [INF] Removing expired grants
+2024-09-26 15:26:52.130 +07:00 [INF] Removing expired grants
+2024-09-26 15:27:52.139 +07:00 [INF] Removing expired grants
+2024-09-26 15:28:52.146 +07:00 [INF] Removing expired grants
+2024-09-26 15:29:52.159 +07:00 [INF] Removing expired grants
+2024-09-26 15:30:52.169 +07:00 [INF] Removing expired grants
+2024-09-26 15:31:52.180 +07:00 [INF] Removing expired grants
+2024-09-26 15:32:52.189 +07:00 [INF] Removing expired grants
+2024-09-26 15:33:52.199 +07:00 [INF] Removing expired grants
+2024-09-26 15:34:52.214 +07:00 [INF] Removing expired grants
+2024-09-26 15:35:52.219 +07:00 [INF] Removing expired grants
+2024-09-26 15:36:52.235 +07:00 [INF] Removing expired grants
+2024-09-26 15:37:52.250 +07:00 [INF] Removing expired grants
+2024-09-26 15:38:52.262 +07:00 [INF] Removing expired grants
+2024-09-26 15:39:52.277 +07:00 [INF] Removing expired grants
+2024-09-26 15:40:52.285 +07:00 [INF] Removing expired grants
+2024-09-26 15:41:52.298 +07:00 [INF] Removing expired grants
+2024-09-26 15:42:52.324 +07:00 [INF] Removing expired grants
+2024-09-26 15:43:52.328 +07:00 [INF] Removing expired grants
+2024-09-26 15:44:52.339 +07:00 [INF] Removing expired grants
+2024-09-26 15:45:52.351 +07:00 [INF] Removing expired grants
+2024-09-26 15:46:52.357 +07:00 [INF] Removing expired grants
+2024-09-26 15:47:52.371 +07:00 [INF] Removing expired grants
+2024-09-26 15:48:52.382 +07:00 [INF] Removing expired grants
+2024-09-26 15:49:52.394 +07:00 [INF] Removing expired grants
+2024-09-26 15:50:52.403 +07:00 [INF] Removing expired grants
+2024-09-26 15:51:52.410 +07:00 [INF] Removing expired grants
+2024-09-26 15:52:52.421 +07:00 [INF] Removing expired grants
+2024-09-26 15:53:52.432 +07:00 [INF] Removing expired grants
+2024-09-26 15:54:52.445 +07:00 [INF] Removing expired grants
+2024-09-26 15:55:52.448 +07:00 [INF] Removing expired grants
+2024-09-26 15:56:52.461 +07:00 [INF] Removing expired grants
+2024-09-26 15:57:52.472 +07:00 [INF] Removing expired grants
+2024-09-26 15:58:52.480 +07:00 [INF] Removing expired grants
+2024-09-26 15:59:52.491 +07:00 [INF] Removing expired grants
+2024-09-26 16:00:52.499 +07:00 [INF] Removing expired grants
+2024-09-26 16:01:52.514 +07:00 [INF] Removing expired grants
+2024-09-26 16:02:52.522 +07:00 [INF] Removing expired grants
+2024-09-26 16:03:52.531 +07:00 [INF] Removing expired grants
+2024-09-26 16:04:52.543 +07:00 [INF] Removing expired grants
+2024-09-26 16:05:52.551 +07:00 [INF] Removing expired grants
+2024-09-26 16:06:52.553 +07:00 [INF] Removing expired grants
+2024-09-26 16:07:52.559 +07:00 [INF] Removing expired grants
+2024-09-26 16:08:52.575 +07:00 [INF] Removing expired grants
+2024-09-26 16:09:52.591 +07:00 [INF] Removing expired grants
+2024-09-26 16:10:52.601 +07:00 [INF] Removing expired grants
+2024-09-26 16:11:52.610 +07:00 [INF] Removing expired grants
+2024-09-26 16:12:52.619 +07:00 [INF] Removing expired grants
+2024-09-26 16:13:52.632 +07:00 [INF] Removing expired grants
+2024-09-26 16:14:52.637 +07:00 [INF] Removing expired grants
+2024-09-26 16:15:52.642 +07:00 [INF] Removing expired grants
+2024-09-26 16:16:52.647 +07:00 [INF] Removing expired grants
+2024-09-26 16:17:52.648 +07:00 [INF] Removing expired grants
+2024-09-26 16:18:52.660 +07:00 [INF] Removing expired grants
+2024-09-26 16:19:52.683 +07:00 [INF] Removing expired grants
+2024-09-26 16:20:52.688 +07:00 [INF] Removing expired grants
+2024-09-26 16:21:52.700 +07:00 [INF] Removing expired grants
+2024-09-26 16:22:52.709 +07:00 [INF] Removing expired grants
+2024-09-26 16:23:52.715 +07:00 [INF] Removing expired grants
+2024-09-26 16:24:52.732 +07:00 [INF] Removing expired grants
+2024-09-26 16:25:52.747 +07:00 [INF] Removing expired grants
+2024-09-26 16:26:52.759 +07:00 [INF] Removing expired grants
+2024-09-26 16:27:52.778 +07:00 [INF] Removing expired grants
+2024-09-26 16:28:52.780 +07:00 [INF] Removing expired grants
+2024-09-26 16:29:52.787 +07:00 [INF] Removing expired grants
+2024-09-26 16:30:52.799 +07:00 [INF] Removing expired grants
+2024-09-26 16:31:52.824 +07:00 [INF] Removing expired grants
+2024-09-26 16:32:52.834 +07:00 [INF] Removing expired grants
+2024-09-26 16:33:52.845 +07:00 [INF] Removing expired grants
+2024-09-26 16:34:52.846 +07:00 [INF] Removing expired grants
+2024-09-26 16:35:52.847 +07:00 [INF] Removing expired grants
+2024-09-26 16:36:52.871 +07:00 [INF] Removing expired grants
+2024-09-26 16:37:52.881 +07:00 [INF] Removing expired grants
+2024-09-26 16:38:52.889 +07:00 [INF] Removing expired grants
+2024-09-26 16:39:52.897 +07:00 [INF] Removing expired grants
+2024-09-26 16:40:52.918 +07:00 [INF] Removing expired grants
+2024-09-26 16:41:52.938 +07:00 [INF] Removing expired grants
+2024-09-26 16:42:52.954 +07:00 [INF] Removing expired grants
+2024-09-26 16:43:52.954 +07:00 [INF] Removing expired grants
+2024-09-26 16:44:52.964 +07:00 [INF] Removing expired grants
+2024-09-26 16:45:52.980 +07:00 [INF] Removing expired grants
+2024-09-26 16:46:52.996 +07:00 [INF] Removing expired grants
+2024-09-26 16:47:52.999 +07:00 [INF] Removing expired grants
+2024-09-26 16:48:53.011 +07:00 [INF] Removing expired grants
+2024-09-26 16:49:53.021 +07:00 [INF] Removing expired grants
+2024-09-26 16:50:53.028 +07:00 [INF] Removing expired grants
+2024-09-26 16:51:53.031 +07:00 [INF] Removing expired grants
+2024-09-26 16:52:53.038 +07:00 [INF] Removing expired grants
+2024-09-26 16:53:53.044 +07:00 [INF] Removing expired grants
+2024-09-26 16:54:53.057 +07:00 [INF] Removing expired grants
+2024-09-26 16:55:53.063 +07:00 [INF] Removing expired grants
+2024-09-26 16:56:53.084 +07:00 [INF] Removing expired grants
+2024-09-26 16:57:53.084 +07:00 [INF] Removing expired grants
+2024-09-26 16:58:53.090 +07:00 [INF] Removing expired grants
+2024-09-26 16:59:53.090 +07:00 [INF] Removing expired grants
+2024-09-26 17:00:53.090 +07:00 [INF] Removing expired grants
+2024-09-26 17:01:53.096 +07:00 [INF] Removing expired grants
+2024-09-26 17:02:53.107 +07:00 [INF] Removing expired grants
+2024-09-26 17:03:53.111 +07:00 [INF] Removing expired grants
+2024-09-26 17:04:53.126 +07:00 [INF] Removing expired grants
+2024-09-26 17:05:53.132 +07:00 [INF] Removing expired grants
+2024-09-26 17:06:53.136 +07:00 [INF] Removing expired grants
+2024-09-26 17:07:53.137 +07:00 [INF] Removing expired grants
+2024-09-26 17:08:53.143 +07:00 [INF] Removing expired grants
+2024-09-26 17:09:53.157 +07:00 [INF] Removing expired grants
+2024-09-26 17:10:53.163 +07:00 [INF] Removing expired grants
+2024-09-26 17:11:53.177 +07:00 [INF] Removing expired grants
+2024-09-26 17:12:53.189 +07:00 [INF] Removing expired grants
+2024-09-26 17:13:53.195 +07:00 [INF] Removing expired grants
+2024-09-26 17:14:53.210 +07:00 [INF] Removing expired grants
+2024-09-26 17:15:53.230 +07:00 [INF] Removing expired grants
+2024-09-26 17:16:53.241 +07:00 [INF] Removing expired grants
+2024-09-26 17:17:53.248 +07:00 [INF] Removing expired grants
+2024-09-26 17:18:53.262 +07:00 [INF] Removing expired grants
+2024-09-26 17:19:53.282 +07:00 [INF] Removing expired grants
+2024-09-26 17:20:53.288 +07:00 [INF] Removing expired grants
+2024-09-26 17:21:53.289 +07:00 [INF] Removing expired grants
+2024-09-26 17:22:53.296 +07:00 [INF] Removing expired grants
+2024-09-26 17:23:53.307 +07:00 [INF] Removing expired grants
+2024-09-26 17:24:53.318 +07:00 [INF] Removing expired grants
+2024-09-26 17:25:53.328 +07:00 [INF] Removing expired grants
+2024-09-26 17:26:53.342 +07:00 [INF] Removing expired grants
+2024-09-26 17:27:53.343 +07:00 [INF] Removing expired grants
+2024-09-26 17:28:53.352 +07:00 [INF] Removing expired grants
+2024-09-26 17:29:53.358 +07:00 [INF] Removing expired grants
+2024-09-26 17:30:53.381 +07:00 [INF] Removing expired grants
+2024-09-26 17:31:53.386 +07:00 [INF] Removing expired grants
+2024-09-26 17:32:53.398 +07:00 [INF] Removing expired grants
+2024-09-26 17:33:53.400 +07:00 [INF] Removing expired grants
+2024-09-26 17:34:53.402 +07:00 [INF] Removing expired grants
+2024-09-26 17:35:53.415 +07:00 [INF] Removing expired grants
+2024-09-26 17:36:53.426 +07:00 [INF] Removing expired grants
+2024-09-26 17:37:53.439 +07:00 [INF] Removing expired grants
+2024-09-26 17:38:53.455 +07:00 [INF] Removing expired grants
+2024-09-26 17:39:53.478 +07:00 [INF] Removing expired grants
+2024-09-26 17:40:53.484 +07:00 [INF] Removing expired grants
+2024-09-26 17:41:53.494 +07:00 [INF] Removing expired grants
+2024-09-26 17:42:53.501 +07:00 [INF] Removing expired grants
+2024-09-26 17:43:53.508 +07:00 [INF] Removing expired grants
+2024-09-26 17:44:53.513 +07:00 [INF] Removing expired grants
+2024-09-26 17:45:53.527 +07:00 [INF] Removing expired grants
+2024-09-26 17:46:53.534 +07:00 [INF] Removing expired grants
+2024-09-26 17:47:53.539 +07:00 [INF] Removing expired grants
+2024-09-26 17:48:53.552 +07:00 [INF] Removing expired grants
+2024-09-26 17:49:53.557 +07:00 [INF] Removing expired grants
+2024-09-26 17:50:53.565 +07:00 [INF] Removing expired grants
+2024-09-26 17:51:53.577 +07:00 [INF] Removing expired grants
+2024-09-26 17:52:53.580 +07:00 [INF] Removing expired grants
+2024-09-26 17:53:53.594 +07:00 [INF] Removing expired grants
+2024-09-26 17:54:53.595 +07:00 [INF] Removing expired grants
+2024-09-26 17:55:53.609 +07:00 [INF] Removing expired grants
+2024-09-26 17:56:53.634 +07:00 [INF] Removing expired grants

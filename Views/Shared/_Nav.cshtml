@@ -1,0 +1,38 @@
+@using IdentityServer4.Extensions
+
+@{
+    string? name = null;
+    if (!true.Equals(ViewData["signed-out"]))
+    {
+        name = Context.User?.GetDisplayName();
+    }
+}
+
+<div class="nav-page">
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+            <a href="~/" class="navbar-brand">
+                <img src="~/icon.png" class="icon-banner">
+                HomeAutio.Mqtt.GoogleHome
+            </a>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item btn-group" role="group" aria-label="Theme">
+                    <button type="button" class="btn btn-light navbar-btn" data-theme="light">Light</button>
+                    <button type="button" class="btn btn-dark navbar-btn" data-theme="dark">Dark</button>
+                </li>
+
+                @if (!string.IsNullOrWhiteSpace(name))
+                {
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">@name</a>
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" asp-action="Logout" asp-controller="Account">Logout</a></li>
+                        </ul>
+                    </li>
+                }
+            </ul>
+        </div>
+    </nav>
+</div>
